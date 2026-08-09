@@ -1,6 +1,6 @@
 /* ==========================================================================
    HEATWAVE INTELLIGENCE SYSTEM - CORE STYLESHEET (style.css)
-   Clean Light Theme - Solid Colors (No Gradients)
+   Clean Light Theme - Light Headers & Light Cards (No Dark Blue)
    Fulfilling: Task 3 (External CSS, Theme), Task 4 (Sidebar Cards), 
                Task 5 (Box Model Cards), Task 10 (Effects & Highlighting)
    ========================================================================== */
@@ -8,15 +8,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Color Palette - Clean Light Theme with Solid Colors */
+    /* Color Palette - Clean Light Theme */
     --bg-main: #f8fafc;
     --bg-surface: #ffffff;
     --bg-card: #ffffff;
-    --bg-card-alt: #f1f5f9;
+    --bg-header: #ffffff;
+    --bg-nav: #ffffff;
     
     --text-main: #0f172a;
-    --text-muted: #475569;
-    --text-light: #ffffff;
+    --text-heading: #0f172a;
+    --text-muted: #64748b;
+    --text-dark: #0f172a;
     
     --accent-red: #dc2626;
     --accent-red-bg: #fef2f2;
@@ -29,9 +31,6 @@
     --accent-green: #059669;
     --accent-green-bg: #ecfdf5;
     
-    --accent-blue: #2563eb;
-    --accent-blue-bg: #eff6ff;
-    
     --border-color: #e2e8f0;
     --border-dark: #cbd5e1;
     
@@ -39,9 +38,9 @@
     --radius-md: 12px;
     --radius-lg: 16px;
     
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* Site-wide Body & Typography (Task 3 Requirement) */
@@ -70,18 +69,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
     margin-top: 0;
-    color: var(--text-main);
+    color: var(--text-heading);
 }
 
 h1 { 
     font-size: 2.2rem; 
     font-weight: 800; 
+    color: var(--text-heading);
 }
 
 h2 { 
     font-size: 1.6rem; 
     font-weight: 700; 
-    color: #1e293b; 
+    color: #0f172a; 
     border-bottom: 3px solid var(--accent-red);
     padding-bottom: 8px;
     margin-top: 28px;
@@ -96,7 +96,7 @@ h3 {
 
 /* Links Styling */
 a {
-    color: var(--accent-blue);
+    color: #2563eb;
     text-decoration: none;
     transition: color 0.2s ease, text-decoration 0.2s ease;
 }
@@ -202,7 +202,7 @@ section {
 .product-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--accent-blue);
+    border-color: var(--accent-red);
 }
 
 .product-card .stat-number {
@@ -223,8 +223,8 @@ section {
 
 /* Blockquote Styling */
 blockquote {
-    background-color: var(--accent-blue-bg);
-    border-left: 5px solid var(--accent-blue);
+    background-color: #f1f5f9;
+    border-left: 5px solid #64748b;
     margin: 20px 0;
     padding: 20px 24px;
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -299,7 +299,7 @@ mark {
 .glowing-alert-box h3 {
     color: #991b1b;
     font-size: 1.35rem;
-    text-shadow: 0 1px 2px rgba(153, 27, 27, 0.2);
+    text-shadow: 0 1px 2px rgba(153, 27, 27, 0.15);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -310,7 +310,7 @@ mark {
         box-shadow: 0 0 6px rgba(220, 38, 38, 0.2);
     }
     50% {
-        box-shadow: 0 0 18px rgba(220, 38, 38, 0.45);
+        box-shadow: 0 0 18px rgba(220, 38, 38, 0.4);
     }
     100% {
         box-shadow: 0 0 6px rgba(220, 38, 38, 0.2);
@@ -352,11 +352,13 @@ mark {
 footer, .main-footer {
     margin-top: 48px;
     padding: 32px 24px;
-    background-color: #1e293b;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
     border-top: 3px solid var(--accent-red);
-    color: #94a3b8;
+    color: #64748b;
     text-align: center;
     border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
     font-size: 0.9rem;
 }
 
@@ -365,10 +367,10 @@ footer p, .main-footer p {
 }
 
 footer a, .main-footer a {
-    color: #38bdf8;
+    color: #2563eb;
     font-weight: 500;
 }
 
 footer a:hover, .main-footer a:hover {
-    color: #7dd3fc;
+    color: #1d4ed8;
 }

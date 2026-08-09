@@ -1,6 +1,6 @@
 /* ==========================================================================
    HEATWAVE INTELLIGENCE SYSTEM - TABLE STYLESHEET (table.css)
-   Clean Light Theme - Solid Colors (No Gradients)
+   Clean Light Theme - Light Table Headers (No Dark Blue)
    Fulfilling: Task 7 (Table Styling for Forecast & Severity List)
    ========================================================================== */
 
@@ -13,7 +13,7 @@ table {
     background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
     border: 1px solid #cbd5e1;
 }
 
@@ -29,15 +29,15 @@ caption {
     letter-spacing: 0.01em;
 }
 
-/* Table Header (Task 7 Requirement: Header background color & center align text - Solid No Gradient) */
+/* Table Header (Task 7 Requirement: Header background color & center align text - Light Theme) */
 th {
-    background-color: #1e293b; /* Task 7: Header background color (Solid No Gradient) */
-    color: #ffffff;
+    background-color: #f1f5f9; /* Task 7: Header background color (Light Gray, No Dark Blue) */
+    color: #0f172a; /* Dark text on light background */
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     padding: 14px 16px;
     text-align: center; /* Task 7: Center align text */
-    border: 1px solid #334155;
+    border: 1px solid #cbd5e1;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -63,7 +63,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background-color: #f1f5f9;
+    background-color: #fee2e2;
 }
 
 /* Table Footer Row */

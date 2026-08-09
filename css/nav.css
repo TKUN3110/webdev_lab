@@ -1,18 +1,18 @@
 /* ==========================================================================
    HEATWAVE INTELLIGENCE SYSTEM - NAVIGATION & MEDIA STYLESHEET (nav.css)
-   Clean Light Theme - Solid Colors (No Gradients)
+   Clean Light Theme - Light Navigation Bar (No Dark Blue)
    Fulfilling: Task 2 (Internal/External Navigation Menu), 
                Task 6 (Image Gallery & Interactive Map Styling)
    ========================================================================== */
 
-/* Navigation Container (Task 2 & Clean Solid Navbar) */
+/* Navigation Container (Task 2 & Clean Solid Light Navbar) */
 nav, .nav-bar, #main-nav {
-    background-color: #1e293b; /* Solid background color (No Gradients) */
+    background-color: #ffffff; /* Solid Light Background */
     padding: 10px 16px;
     border-radius: 12px;
     margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #0f172a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #cbd5e1;
     text-align: center;
 }
 
@@ -36,7 +36,7 @@ nav ul li, .nav-bar ul li, #main-nav ul li {
 /* Navigation Links (Task 2 Requirement: Styling links & text-decoration) */
 nav ul li a, .nav-bar ul li a, #main-nav ul li a {
     display: inline-block;
-    color: #f8fafc; /* Task 2: link colors */
+    color: #1e293b; /* Task 2: dark link text on light background */
     text-decoration: none; /* Task 2: remove text decoration */
     padding: 10px 16px;
     font-size: 0.9rem;
@@ -48,16 +48,15 @@ nav ul li a, .nav-bar ul li a, #main-nav ul li a {
 
 /* Navigation Hover Effect (Task 2 Requirement: :hover effect & color change) */
 nav ul li a:hover, .nav-bar ul li a:hover, #main-nav ul li a:hover {
-    background-color: #2563eb; /* Task 2: hover effect solid background color */
-    color: #ffffff; /* Task 2: change link colors */
+    background-color: #f1f5f9; /* Task 2: hover effect light background */
+    color: #dc2626; /* Task 2: change link colors to red accent */
     text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
 }
 
 /* Active Navigation Link Indicator */
 nav ul li a.active, .nav-bar ul li a.active, #main-nav ul li a.active {
-    background-color: #2563eb;
+    background-color: #dc2626; /* Solid Red Active Pill */
     color: #ffffff;
     font-weight: 700;
 }
@@ -85,7 +84,7 @@ img,
     border-radius: 12px;
     margin: 16px auto; /* Task 6: Add spacing between images */
     display: block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     object-fit: cover; /* Task 6: Same size / fitting */
 }
@@ -95,20 +94,20 @@ img:hover,
 .gallery-image:hover,
 .map-image:hover {
     transform: scale(1.03); /* Task 6: transform: scale() hover zoom effect */
-    border-color: #2563eb;
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+    border-color: #dc2626;
+    box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
 }
 
 /* Embed IFrames Styling (Videos & Interactive Weather Maps) */
 iframe {
     border-radius: 12px;
     border: 2px solid #cbd5e1 !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, border-color 0.3s ease;
     max-width: 100%;
 }
 
 iframe:hover {
-    border-color: #2563eb !important;
+    border-color: #dc2626 !important;
     transform: translateY(-3px);
 }
