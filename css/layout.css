@@ -1,0 +1,65 @@
+/* ==========================================
+   Task 9: Page Layout Using CSS (Header, Sidebar, Content, Footer)
+   ========================================== */
+
+/* Page Layout Wrapper */
+.layout-container,
+main#main-content {
+    display: flex; /* Task 9: Use flex or float for page layout */
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 24px auto;
+    align-items: flex-start;
+}
+
+/* Header (Task 9: Header at top) */
+header#main-header,
+header {
+    width: 100%;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Content Area (Task 9: Content to right/left with width and spacing) */
+#main-content > section,
+.content-area,
+main article {
+    flex: 2 1 65%; /* Task 9: Set width and flex allocation */
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+/* Sidebar Area (Task 9: Set sidebar to left/right) */
+#alert-aside,
+.sidebar,
+aside {
+    flex: 1 1 28%; /* Task 9: Set width for sidebar */
+    min-width: 260px;
+    box-sizing: border-box;
+}
+
+/* Footer (Task 9: Footer at bottom) */
+footer,
+.main-footer {
+    width: 100%;
+    clear: both; /* Fallback for float layouts */
+    margin-top: 32px;
+}
+
+/* Responsive Mobile Layout (Stacking for smaller screens) */
+@media (max-width: 768px) {
+    .layout-container,
+    main#main-content {
+        flex-direction: column;
+    }
+    
+    #main-content > section,
+    .content-area,
+    main article,
+    #alert-aside,
+    .sidebar,
+    aside {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}

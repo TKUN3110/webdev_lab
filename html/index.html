@@ -5,24 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Heatwave Intelligence System</title>
+    <!-- Task 3 & 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    
+    <!-- Task 2: Internal CSS for Navigation Menu -->
+    <style>
+        /* Task 2: Internal CSS (<style> in <head>) */
+        #main-nav ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+        #main-nav ul li {
+            display: inline-block; /* Display menu items horizontally */
+            margin: 0 4px;
+        }
+        #main-nav ul li a {
+            color: #ffffff;
+            text-decoration: none; /* Remove text decoration */
+            padding: 10px 18px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        #main-nav ul li a:hover {
+            background-color: #3b82f6; /* Hover effect */
+            color: #ffffff;
+            text-decoration: underline; /* :hover, text-decoration, display: inline-block */
+        }
+    </style>
 </head>
 
 <body id="home-body" class="portal-body">
 
-    <header id="main-header" class="header-section" style="background-color: #f8f9fa; padding: 10px;">
-        <h1 id="system-title" class="title-heading"
-            title="Climate Intelligence for Heatwave Monitoring, Prediction, and Early Warning ( )">
+    <!-- Task 1: Inline CSS to style Header, h1, and p -->
+    <header id="main-header" class="header-section" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" class="title-heading" style="color: #ffffff; text-align: center; margin: 0 0 10px 0; font-size: 2.2rem;"
+            title="Climate Intelligence for Heatwave Monitoring, Prediction, and Early Warning">
             Heatwave Intelligence System
         </h1>
-        <p id="season-tagline" class="tagline">
+        <p id="season-tagline" class="tagline" style="color: #cbd5e1; text-align: center; margin: 0; font-size: 1.05rem;">
             <i>Climate Intelligence for Heatwave Monitoring, Prediction, and Early Warning</i><br>
-            <strong>Monitoring Season:</strong> Summer / Pre-Monsoon 2026
+            <strong style="color: #f59e0b;">Monitoring Season:</strong> Summer / Pre-Monsoon 2026
         </p>
     </header>
 
     <nav id="main-nav" class="nav-bar">
         <ul>
-            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="index.html" id="nav-home" class="active">Home</a></li>
             <li><a href="alert-details.html" id="nav-alert">Alert Bulletin</a></li>
             <li><a href="about-system.html" id="nav-about">About System</a></li>
             <li><a href="sources.html" id="nav-sources">Data Sources & Stakeholders</a></li>
@@ -37,7 +69,7 @@
     <main id="main-content">
         <section id="intro-section" class="content-section">
             <h2>Welcome to the Heatwave Intelligence Web Portal</h2>
-            <article id="mission-article">
+            <article id="mission-article" class="card">
                 <h3>Our Mission</h3>
                 <p>
                     Providing AI-enabled climate intelligence solutions for continuous <strong>heatwave
@@ -45,24 +77,52 @@
                     temperature forecasting, hotspot identification, and early warning dissemination across India.
                 </p>
                 <p>
-                    Developed under Use Case <strong> </strong> in collaboration with the
+                    Developed in collaboration with the
                     <strong>India Meteorological Department (IMD)</strong>, this portal integrates historical
                     meteorological datasets with real-time ground observations from
                     <strong>IoT-enabled Automated Weather Stations (AWS)</strong>.
                 </p>
             </article>
+
+            <!-- Task 5: Feature Cards display using Box Model -->
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; margin-top: 20px;">
+                <div class="product-card">
+                    <h4 style="color: #ef4444; margin-top:0;">🔥 Live Alerts</h4>
+                    <p>Real-time heatwave detection and severe weather warnings for high-risk zones.</p>
+                </div>
+                <div class="product-card">
+                    <h4 style="color: #3b82f6; margin-top:0;">📊 Temperature Forecast</h4>
+                    <p>7-day AI forecast powered by IoT ground sensors and satellite imagery.</p>
+                </div>
+                <div class="product-card">
+                    <h4 style="color: #10b981; margin-top:0;">🛡️ Public Advisory</h4>
+                    <p>Actionable medical guidelines and agricultural irrigation protection tips.</p>
+                </div>
+            </div>
         </section>
 
-        <aside id="alert-aside" class="notice-sidebar"
-            style="background-color: #fff3cd; padding: 10px; border-left: 4px solid #ffc107;">
-            <h3>Important Notice & Warning</h3>
+        <!-- Task 4 & Task 10: Sidebar with glowing alert effect -->
+        <aside id="alert-aside" class="notice-sidebar offer-box">
+            <h3><span class="blinking-text">⚠️ Emergency Notice</span> & Warning</h3>
             <p>
                 Severe heatwave warning issued for Vidarbha, Marathwada, and Central India regions.
-                Maximum temperatures exceeding 45°C. Check the <a href="alert-details.html">Alert Bulletin</a> for
+                Maximum temperatures exceeding <strong>45°C</strong>. Check the <a href="alert-details.html">Alert Bulletin</a> for
                 safety advisories.
             </p>
+            <ul>
+                <li><strong>Chandrapur:</strong> 47.2°C (Critical)</li>
+                <li><strong>Solapur:</strong> 46.8°C (Severe)</li>
+                <li><strong>Jalgaon:</strong> 43.5°C (Watch)</li>
+            </ul>
         </aside>
     </main>
+
+    <!-- Task 3: Common Footer Style -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
+
 </body>
 
 </html>

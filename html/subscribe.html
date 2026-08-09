@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advisory Subscription - Heatwave Intelligence System</title>
+    <!-- Task 3, 8, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Heatwave Intelligence System</h1>
-        <p><i>Online Heatwave Advisory Subscription Form</i></p>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Online Heatwave Advisory Subscription Form</i></p>
     </header>
 
-    <nav>
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="alert-details.html">Alert Bulletin</a></li>
@@ -23,42 +28,40 @@
             <li><a href="navigation.html">Navigation Portal</a></li>
             <li><a href="hotspot-map.html">Hotspot Map</a></li>
             <li><a href="forecast.html">Forecast Summary</a></li>
-            <li><a href="subscribe.html">Advisory Subscription</a></li>
+            <li><a href="subscribe.html" class="active">Advisory Subscription</a></li>
             <li><a href="media.html">Media & Awareness</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main id="main-content">
         <h2>Heatwave Advisory Subscription Registration</h2>
 
-        <div id="subscription-success-prompt" style="display:none; background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 4px; margin-bottom: 20px;">
-            <strong>Success!</strong> You have successfully subscribed to Heatwave Advisories.
+        <div id="subscription-success-prompt" style="display:none; background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: 600;">
+            🎉 Success! You have successfully subscribed to Heatwave Advisories.
         </div>
 
-        <form id="subscriptionForm" action="#" method="POST" onsubmit="alert('Successfully Subscribed to Heatwave Advisories!'); return false;">
+        <!-- Task 8: Form UI styling with fieldset, legend, :focus, :hover, border-radius -->
+        <form id="subscriptionForm" action="#" method="POST">
             <fieldset>
                 <legend>Subscriber Personal Information</legend>
 
-                <label for="cname">Full Name:</label><br>
-                <input type="text" id="cname" name="cname" placeholder="Enter your full name" required
-                    autofocus><br><br>
+                <label for="cname">Full Name:</label>
+                <input type="text" id="cname" name="cname" placeholder="Enter your full name" required autofocus>
 
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required><br><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
 
-                <label for="mobile">Mobile Number:</label><br>
-                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit mobile number"
-                    required><br><br>
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
 
-                <label for="age">Subscriber Age:</label><br>
-                <input type="number" id="age" name="age" min="1" max="120" placeholder="Age in years" required><br><br>
+                <label for="age">Subscriber Age:</label>
+                <input type="number" id="age" name="age" min="1" max="120" placeholder="Age in years" required>
             </fieldset>
-            <br>
 
             <fieldset>
-                <legend>Alert & Location Preferences</legend>
+                <legend>Alert &amp; Location Preferences</legend>
 
-                <label for="region">Select Monitoring Region Zone:</label><br>
+                <label for="region">Select Monitoring Region Zone:</label>
                 <select id="region" name="region" required>
                     <option value="">--Select Region--</option>
                     <option value="north">North Zone (Jalgaon, Nashik)</option>
@@ -66,38 +69,50 @@
                     <option value="vidarbha">Vidarbha Zone (Nagpur, Chandrapur)</option>
                     <option value="konkan">Coastal Konkan Zone (Mumbai, Thane)</option>
                     <option value="marathwada">Marathwada Zone (Latur, Nanded)</option>
-                </select><br><br>
+                </select>
 
-                <label>Preferred Alert Language:</label><br>
+                <label style="display:block; margin-top:10px;">Preferred Alert Language:</label>
                 <input type="radio" id="lang-en" name="language" value="English" required>
-                <label for="lang-en">English</label>
+                <label for="lang-en" style="margin-right: 15px;">English</label>
                 <input type="radio" id="lang-hi" name="language" value="Hindi">
-                <label for="lang-hi">Hindi</label>
+                <label for="lang-hi" style="margin-right: 15px;">Hindi</label>
                 <input type="radio" id="lang-mr" name="language" value="Marathi">
-                <label for="lang-mr">Marathi</label><br><br>
+                <label for="lang-mr">Marathi</label>
 
-                <label>Alert Notifications to Receive:</label><br>
-                <input type="checkbox" id="alert-temp" name="alerts" value="Temperature Forecasts" checked>
-                <label for="alert-temp">Daily Temperature Forecasts</label><br>
+                <label style="display:block; margin-top:15px;">Alert Notifications to Receive:</label>
+                <div style="margin-bottom: 8px;">
+                    <input type="checkbox" id="alert-temp" name="alerts" value="Temperature Forecasts" checked>
+                    <label for="alert-temp">Daily Temperature Forecasts</label>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <input type="checkbox" id="alert-shw" name="alerts" value="Severe Heatwave Warnings" checked>
+                    <label for="alert-shw">Severe Heatwave Emergency Warnings</label>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <input type="checkbox" id="alert-health" name="alerts" value="Public Health Advisories">
+                    <label for="alert-health">Public Health &amp; Medical Advisories</label>
+                </div>
+                <div style="margin-bottom: 12px;">
+                    <input type="checkbox" id="alert-agri" name="alerts" value="Agricultural Crop Advisories">
+                    <label for="alert-agri">Agricultural &amp; Crop Safety Advisories</label>
+                </div>
 
-                <input type="checkbox" id="alert-shw" name="alerts" value="Severe Heatwave Warnings" checked>
-                <label for="alert-shw">Severe Heatwave Emergency Warnings</label><br>
-
-                <input type="checkbox" id="alert-health" name="alerts" value="Public Health Advisories">
-                <label for="alert-health">Public Health & Medical Advisories</label><br>
-
-                <input type="checkbox" id="alert-agri" name="alerts" value="Agricultural Crop Advisories">
-                <label for="alert-agri">Agricultural & Crop Safety Advisories</label><br><br>
-
-                <label for="startdate">Preferred Subscription Start Date:</label><br>
-                <input type="date" id="startdate" name="startdate" required><br><br>
+                <label for="startdate">Preferred Subscription Start Date:</label>
+                <input type="date" id="startdate" name="startdate" required>
             </fieldset>
-            <br>
 
-            <input type="submit" value="Subscribe to Advisories">
-            <input type="reset" value="Clear Form">
+            <div style="text-align: center;">
+                <input type="submit" value="Subscribe to Advisories">
+                <input type="reset" value="Clear Form">
+            </div>
         </form>
     </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
     <script>
         document.getElementById('subscriptionForm').addEventListener('submit', function (e) {
@@ -109,7 +124,6 @@
             }
         });
     </script>
-
 
 </body>
 

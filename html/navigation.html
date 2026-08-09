@@ -5,22 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Menu - Heatwave Intelligence System</title>
+    <!-- Task 3, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/layout.css">
+
+    <!-- Task 2: Internal CSS (<style> in <head>) -->
+    <style>
+        #main-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #main-nav ul li {
+            display: inline-block;
+            margin: 0 4px;
+        }
+        #main-nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 18px;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+        #main-nav ul li a:hover {
+            background-color: #3b82f6;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Heatwave Intelligence System</h1>
-        <p><i>Central Portal Navigation Directory</i></p>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Central Portal Navigation Directory</i></p>
     </header>
 
-    <nav>
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="alert-details.html">Alert Bulletin</a></li>
             <li><a href="about-system.html">About System</a></li>
             <li><a href="sources.html">Data Sources & Stakeholders</a></li>
-            <li><a href="navigation.html">Navigation Portal</a></li>
+            <li><a href="navigation.html" class="active">Navigation Portal</a></li>
             <li><a href="hotspot-map.html">Hotspot Map</a></li>
             <li><a href="forecast.html">Forecast Summary</a></li>
             <li><a href="subscribe.html">Advisory Subscription</a></li>
@@ -28,56 +57,58 @@
         </ul>
     </nav>
 
-    <main>
-        <h2>Portal Internal Navigation Directory</h2>
-        <ul>
-            <li><a href="index.html">Task 1: Home Page</a> — Main landing page with system structure and overview.</li>
-            <li><a href="alert-details.html">Task 2: Alert Description Page</a> — Severe heatwave bulletin and public
-                advisories.</li>
-            <li><a href="about-system.html">Task 3: About System Page</a> — Block and inline formatting of system
-                objectives and stakeholders.</li>
-            <li><a href="sources.html">Task 4: Data Sources & Stakeholders Page</a> — Workflow lists, data sources, and
-                abbreviation definitions.</li>
-            <li><a href="navigation.html">Task 5: Navigation Directory Page</a> — Central hyperlinks menu and external
-                contact portals.</li>
-            <li><a href="hotspot-map.html">Task 6: Interactive Hotspot Map</a> — Regional heat map with clickable image
-                map coordinates.</li>
-            <li><a href="forecast.html">Task 7: Forecast Summary Table</a> — Region-wise maximum temperature and
-                severity level table.</li>
-            <li><a href="subscribe.html">Task 8: Advisory Subscription Form</a> — Online user registration for heatwave
-                warnings.</li>
-            <li><a href="media.html">Task 9: Media & Awareness Page</a> — Embedded video, audio advisory, map iframe,
-                and script alerts.</li>
-        </ul>
+    <main id="main-content">
+        <section class="card">
+            <h2>Portal Internal Navigation Directory</h2>
+            <ul style="line-height: 2;">
+                <li><a href="index.html"><strong>Task 1: Home Page</strong></a> — Main landing page with system structure and overview.</li>
+                <li><a href="alert-details.html"><strong>Task 2: Alert Description Page</strong></a> — Severe heatwave bulletin and public advisories.</li>
+                <li><a href="about-system.html"><strong>Task 3: About System Page</strong></a> — Block and inline formatting of system objectives and stakeholders.</li>
+                <li><a href="sources.html"><strong>Task 4: Data Sources &amp; Stakeholders Page</strong></a> — Workflow lists, data sources, and abbreviation definitions.</li>
+                <li><a href="navigation.html"><strong>Task 5: Navigation Directory Page</strong></a> — Central hyperlinks menu and external contact portals.</li>
+                <li><a href="hotspot-map.html"><strong>Task 6: Interactive Hotspot Map</strong></a> — Regional heat map with clickable image map coordinates.</li>
+                <li><a href="forecast.html"><strong>Task 7: Forecast Summary Table</strong></a> — Region-wise maximum temperature and severity level table.</li>
+                <li><a href="subscribe.html"><strong>Task 8: Advisory Subscription Form</strong></a> — Online user registration for heatwave warnings.</li>
+                <li><a href="media.html"><strong>Task 9: Media &amp; Awareness Page</strong></a> — Embedded video, audio advisory, map iframe, and script alerts.</li>
+            </ul>
+        </section>
 
-        <h2>External Links & Important Resources</h2>
-        <ul>
-            <li>
-                <a href="https://mausam.imd.gov.in/" target="_blank">India Meteorological Department (IMD) Official
-                    Website</a>
-            </li>
-            <li>
-                <a href="https://imdpune.gov.in/lrfindex.php" target="_blank">IMD Pune Meteorological Data
-                    Repository</a>
-            </li>
-        </ul>
+        <section class="card">
+            <h2>External Links &amp; Important Resources</h2>
+            <ul style="line-height: 2;">
+                <li>
+                    <a href="https://mausam.imd.gov.in/" target="_blank">India Meteorological Department (IMD) Official Website</a>
+                </li>
+                <li>
+                    <a href="https://imdpune.gov.in/lrfindex.php" target="_blank">IMD Pune Meteorological Data Repository</a>
+                </li>
+            </ul>
+        </section>
 
-        <h2>Emergency Communications & Advisory Contacts</h2>
-        <ul>
-            <li>
-                <strong>Heatwave Advisory Coordinator Email:</strong>
-                <a href="mailto:advisory.heatwave@imd.gov.in">advisory.heatwave@imd.gov.in</a>
-            </li>
-            <li>
-                <strong>Disaster Management Helpline Telephone:</strong>
-                <a href="tel:+9118001801717">+91-1800-180-1717 (Toll Free)</a>
-            </li>
-            <li>
-                <strong>National Emergency Helpline Telephone:</strong>
-                <a href="tel:112">112 (Emergency Response Support System)</a>
-            </li>
-        </ul>
+        <section class="card">
+            <h2>Emergency Communications &amp; Advisory Contacts</h2>
+            <ul style="line-height: 2;">
+                <li>
+                    <strong>Heatwave Advisory Coordinator Email:</strong>
+                    <a href="mailto:advisory.heatwave@imd.gov.in">advisory.heatwave@imd.gov.in</a>
+                </li>
+                <li>
+                    <strong>Disaster Management Helpline Telephone:</strong>
+                    <a href="tel:+9118001801717">+91-1800-180-1717 (Toll Free)</a>
+                </li>
+                <li>
+                    <strong>National Emergency Helpline Telephone:</strong>
+                    <a href="tel:112">112 (Emergency Response Support System)</a>
+                </li>
+            </ul>
+        </section>
     </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
 </body>
 

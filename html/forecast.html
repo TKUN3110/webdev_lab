@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forecast Summary - Heatwave Intelligence System</title>
+    <!-- Task 3, 7, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Heatwave Intelligence System</h1>
-        <p><i>Region-wise Maximum Temperature Forecast & Severity Table</i></p>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Region-wise Maximum Temperature Forecast &amp; Severity Table</i></p>
     </header>
 
-    <nav>
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="alert-details.html">Alert Bulletin</a></li>
@@ -22,21 +27,22 @@
             <li><a href="sources.html">Data Sources & Stakeholders</a></li>
             <li><a href="navigation.html">Navigation Portal</a></li>
             <li><a href="hotspot-map.html">Hotspot Map</a></li>
-            <li><a href="forecast.html">Forecast Summary</a></li>
+            <li><a href="forecast.html" class="active">Forecast Summary</a></li>
             <li><a href="subscribe.html">Advisory Subscription</a></li>
             <li><a href="media.html">Media & Awareness</a></li>
         </ul>
     </nav>
 
-    <main>
-        <h2>Region-wise Temperature & Forecast Summary</h2>
+    <main id="main-content">
+        <h2>Region-wise Temperature &amp; Forecast Summary</h2>
 
-        <table border="1" cellpadding="10" cellspacing="0" width="100%">
-            <caption>Official IMD & AI Model Region-wise Temperature Forecast</caption>
+        <!-- Task 7: Styled Table with border-collapse, header background, zebra-striping, and center-aligned text -->
+        <table>
+            <caption>Official IMD &amp; AI Model Region-wise Temperature Forecast</caption>
             <thead>
                 <tr>
                     <th colspan="2">Location Details</th>
-                    <th colspan="3">Temperature & Alert Metrics</th>
+                    <th colspan="3">Temperature &amp; Alert Metrics</th>
                     <th>Action Required</th>
                 </tr>
                 <tr>
@@ -52,47 +58,47 @@
                 <tr id="north">
                     <td rowspan="2">North Zone</td>
                     <td>Jalgaon AWS</td>
-                    <td>43.5</td>
+                    <td><strong>43.5</strong></td>
                     <td>+3.8</td>
                     <td>Heatwave (HW)</td>
-                    <td>Yellow Watch</td>
+                    <td><mark style="background-color: #fef08a; color: #854d0e;">Yellow Watch</mark></td>
                 </tr>
                 <tr>
                     <td>Nashik IMD</td>
                     <td>41.2</td>
                     <td>+2.5</td>
                     <td>Normal High</td>
-                    <td>Green Advisory</td>
+                    <td><mark style="background-color: #d1fae5; color: #065f46;">Green Advisory</mark></td>
                 </tr>
                 <tr id="central">
                     <td rowspan="2">Central Zone</td>
                     <td>Solapur AWS</td>
-                    <td>46.8</td>
+                    <td><strong>46.8</strong></td>
                     <td>+5.9</td>
                     <td>Severe Heatwave (SHW)</td>
-                    <td>Orange Alert</td>
+                    <td><mark style="background-color: #ffedd5; color: #c2410c;">Orange Alert</mark></td>
                 </tr>
                 <tr>
                     <td>Pune IMD</td>
                     <td>39.5</td>
                     <td>+2.1</td>
                     <td>Moderate Risk</td>
-                    <td>Yellow Watch</td>
+                    <td><mark style="background-color: #fef08a; color: #854d0e;">Yellow Watch</mark></td>
                 </tr>
                 <tr id="vidarbha">
                     <td rowspan="2">Vidarbha Zone</td>
                     <td>Chandrapur AWS</td>
-                    <td>47.2</td>
+                    <td><strong style="color: #ef4444;">47.2</strong></td>
                     <td>+6.8</td>
                     <td>Severe Heatwave (SHW)</td>
-                    <td>Red Emergency</td>
+                    <td><mark class="blinking-text" style="background-color: #fee2e2; color: #991b1b;">Red Emergency</mark></td>
                 </tr>
                 <tr>
                     <td>Nagpur IMD</td>
-                    <td>45.5</td>
+                    <td><strong>45.5</strong></td>
                     <td>+5.2</td>
                     <td>Severe Heatwave (SHW)</td>
-                    <td>Orange Alert</td>
+                    <td><mark style="background-color: #ffedd5; color: #c2410c;">Orange Alert</mark></td>
                 </tr>
                 <tr id="coastal">
                     <td>Coastal Zone</td>
@@ -100,19 +106,25 @@
                     <td>36.2</td>
                     <td>+1.5</td>
                     <td>High Humidity Risk</td>
-                    <td>Yellow Watch</td>
+                    <td><mark style="background-color: #fef08a; color: #854d0e;">Yellow Watch</mark></td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
                     <td colspan="6" align="center">
                         *Data updated automatically every hour from IoT Automated Weather Stations (AWS). Forecasts
-                        generated using AI Model Version .
+                        generated using AI Model Version 2.1.
                     </td>
                 </tr>
             </tfoot>
         </table>
     </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
 </body>
 

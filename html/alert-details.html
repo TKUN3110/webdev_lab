@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alert Bulletin - Heatwave Intelligence System</title>
+    <!-- Task 3, 7, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
 
-    <header id="main-header">
-        <h1 id="system-title">Heatwave Intelligence System</h1>
-        <hr>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Official Emergency Heatwave Alerts & Advisories</i></p>
     </header>
 
-    <nav id="main-nav">
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="alert-details.html">Alert Bulletin</a></li>
+            <li><a href="alert-details.html" class="active">Alert Bulletin</a></li>
             <li><a href="about-system.html">About System</a></li>
             <li><a href="sources.html">Data Sources & Stakeholders</a></li>
             <li><a href="navigation.html">Navigation Portal</a></li>
@@ -27,17 +32,15 @@
             <li><a href="media.html">Media & Awareness</a></li>
         </ul>
     </nav>
-    <hr>
 
-    <main>
-        <article>
+    <main id="main-content">
+        <article class="offer-box">
             <h2>Official Severe Heatwave Bulletin</h2>
             <p><strong>Bulletin Version:</strong> v<sub>2.1</sub> | <strong>Date:</strong> 9<sup>th</sup> August 2026
             </p>
-            <hr>
 
-            <p>
-                <strong><mark>SEVERE HEATWAVE ALERT: North Konkan, Vidarbha & Marathwada</mark></strong>
+            <p style="font-size: 1.1rem;">
+                <strong><mark class="blinking-text">⚠️ SEVERE HEATWAVE ALERT: North Konkan, Vidarbha &amp; Marathwada</mark></strong>
             </p>
 
             <p>
@@ -47,36 +50,40 @@
                 reaching <strong>53.5<sup>°C</sup></strong>.
             </p>
 
-            <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                <tr bgcolor="#f9f9f9" align="center">
-                    <th>Region Zone</th>
-                    <th>Observed Max Temp</th>
-                    <th>Departure from Normal</th>
-                    <th>Alert Severity Level</th>
-                </tr>
-                <tr align="center">
-                    <td>Vidarbha (Chandrapur)</td>
-                    <td>47.2<sup>°C</sup></td>
-                    <td>+6.8<sup>°C</sup></td>
-                    <td><abbr title="Severe Heatwave">SHW</abbr> Level 4</td>
-                </tr>
-                <tr align="center">
-                    <td>Central Zone (Solapur)</td>
-                    <td>46.8<sup>°C</sup></td>
-                    <td>+5.9<sup>°C</sup></td>
-                    <td><abbr title="Severe Heatwave">SHW</abbr> Level 4</td>
-                </tr>
-                <tr align="center">
-                    <td>North Zone (Jalgaon)</td>
-                    <td>43.5<sup>°C</sup></td>
-                    <td>+3.8<sup>°C</sup></td>
-                    <td><abbr title="Heatwave">HW</abbr> Level 2</td>
-                </tr>
+            <!-- Task 7: Styled Table with border-collapse and zebra-striping -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Region Zone</th>
+                        <th>Observed Max Temp</th>
+                        <th>Departure from Normal</th>
+                        <th>Alert Severity Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vidarbha (Chandrapur)</td>
+                        <td><strong>47.2<sup>°C</sup></strong></td>
+                        <td>+6.8<sup>°C</sup></td>
+                        <td><abbr title="Severe Heatwave">SHW</abbr> Level 4</td>
+                    </tr>
+                    <tr>
+                        <td>Central Zone (Solapur)</td>
+                        <td><strong>46.8<sup>°C</sup></strong></td>
+                        <td>+5.9<sup>°C</sup></td>
+                        <td><abbr title="Severe Heatwave">SHW</abbr> Level 4</td>
+                    </tr>
+                    <tr>
+                        <td>North Zone (Jalgaon)</td>
+                        <td><strong>43.5<sup>°C</sup></strong></td>
+                        <td>+3.8<sup>°C</sup></td>
+                        <td><abbr title="Heatwave">HW</abbr> Level 2</td>
+                    </tr>
+                </tbody>
             </table>
-            <br>
 
-            <section>
-                <h3>Public Safety Guidelines & Advisories</h3>
+            <section class="card" style="margin-top: 24px;">
+                <h3>Public Safety Guidelines &amp; Advisories</h3>
                 <ul>
                     <li><em>Hydration Advisory:</em> Drink plenty of water and carry oral rehydration salts (ORS) when
                         traveling.</li>
@@ -86,10 +93,14 @@
                         areas.</li>
                 </ul>
             </section>
-            <br>
         </article>
     </main>
-    <hr>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
 </body>
 

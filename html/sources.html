@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Sources & Stakeholders - Heatwave Intelligence System</title>
+    <!-- Task 3, 4, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Heatwave Intelligence System</h1>
-        <p><i>Data Sources, System Workflow & Stakeholder Roles</i></p>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Data Sources, System Workflow &amp; Stakeholder Roles</i></p>
     </header>
 
-    <nav>
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="alert-details.html">Alert Bulletin</a></li>
             <li><a href="about-system.html">About System</a></li>
-            <li><a href="sources.html">Data Sources & Stakeholders</a></li>
+            <li><a href="sources.html" class="active">Data Sources & Stakeholders</a></li>
             <li><a href="navigation.html">Navigation Portal</a></li>
             <li><a href="hotspot-map.html">Hotspot Map</a></li>
             <li><a href="forecast.html">Forecast Summary</a></li>
@@ -28,12 +32,12 @@
         </ul>
     </nav>
 
-    <main>
-        <h2>System Architecture & Workflow</h2>
+    <main id="main-content">
+        <h2>System Architecture &amp; Workflow</h2>
 
-        <section>
+        <section class="card">
             <h3>Forecast and Early Warning Workflow</h3>
-            <ol>
+            <ol style="line-height: 1.8; color: #334155; padding-left: 20px;">
                 <li>Historical Meteorological Data Acquisition from IMD Repositories</li>
                 <li>Data Quality Control, Cleaning, and Spatio-Temporal Pre-processing</li>
                 <li>AI Model Development for Region-wise Temperature Forecasting</li>
@@ -44,9 +48,9 @@
             </ol>
         </section>
 
-        <section>
+        <section class="card">
             <h3>Primary Data Sources</h3>
-            <ul>
+            <ul style="line-height: 1.8;">
                 <li><strong>AWS Sensors:</strong> IoT-enabled Automated Weather Stations measuring localized ambient
                     temperature and humidity.</li>
                 <li><strong>IMD Database:</strong> Long-term historical grid temperature observations across 7 climatic
@@ -56,22 +60,22 @@
             </ul>
         </section>
 
-        <section>
-            <h3>Stakeholder Roles & Available Actions</h3>
-            <ul>
+        <section class="card">
+            <h3>Stakeholder Roles &amp; Available Actions</h3>
+            <ul style="line-height: 1.8;">
                 <li><strong>State Disaster Management Authorities (SDMA)</strong>
                     <ul>
                         <li>Issue regional heat emergency alerts and deploy cooling centers.</li>
                         <li>Coordinate emergency water distribution and relief operations.</li>
                     </ul>
                 </li>
-                <li><strong>Municipal Corporations & Health Departments</strong>
+                <li><strong>Municipal Corporations &amp; Health Departments</strong>
                     <ul>
                         <li>Monitor hospital heat-stroke admission rates.</li>
                         <li>Enforce mandatory rest schedules for outdoor municipal workers.</li>
                     </ul>
                 </li>
-                <li><strong>Agricultural Agencies & Farmers</strong>
+                <li><strong>Agricultural Agencies &amp; Farmers</strong>
                     <ul>
                         <li>Access crop heat stress advisory reports.</li>
                         <li>Adjust irrigation timing to early morning and evening hours.</li>
@@ -86,26 +90,32 @@
             </ul>
         </section>
 
-        <section>
-            <h3>Technical Terms & Abbreviations Explained</h3>
-            <dl>
-                <dt><b>AWS</b></dt>
+        <section class="card">
+            <h3>Technical Terms &amp; Abbreviations Explained</h3>
+            <dl style="line-height: 1.8;">
+                <dt><b style="color: #3b82f6; font-size: 1.1rem;">AWS</b></dt>
                 <dd>Automated Weather Station — IoT-enabled ground sensor units deployed for continuous localized
                     weather observations.</dd>
-
-                <dt><b>IMD</b></dt>
+                <br>
+                <dt><b style="color: #3b82f6; font-size: 1.1rem;">IMD</b></dt>
                 <dd>India Meteorological Department — National meteorological agency providing historical datasets and
                     official weather forecasts.</dd>
-
-                <dt><b>HW</b></dt>
+                <br>
+                <dt><b style="color: #f59e0b; font-size: 1.1rem;">HW</b></dt>
                 <dd>Heatwave — Condition where maximum temperature departure from normal is 4.5°C to 6.4°C.</dd>
-
-                <dt><b>SHW</b></dt>
+                <br>
+                <dt><b style="color: #ef4444; font-size: 1.1rem;">SHW</b></dt>
                 <dd>Severe Heatwave — Extreme weather condition where maximum temperature departure from normal exceeds
                     6.4°C or absolute temp exceeds 47°C.</dd>
             </dl>
         </section>
     </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
 </body>
 

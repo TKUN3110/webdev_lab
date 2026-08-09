@@ -5,38 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotspot Map - Heatwave Intelligence System</title>
+    <!-- Task 3, 6, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
 
-    <header id="main-header">
-        <h1 id="system-title">Heatwave Intelligence System</h1>
-        <p><i>Interactive Regional Heatwave Hotspot Map</i></p>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Interactive Regional Heatwave Hotspot Map</i></p>
     </header>
 
-    <nav id="main-nav">
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="alert-details.html">Alert Bulletin</a></li>
             <li><a href="about-system.html">About System</a></li>
             <li><a href="sources.html">Data Sources & Stakeholders</a></li>
             <li><a href="navigation.html">Navigation Portal</a></li>
-            <li><a href="hotspot-map.html">Hotspot Map</a></li>
+            <li><a href="hotspot-map.html" class="active">Hotspot Map</a></li>
             <li><a href="forecast.html">Forecast Summary</a></li>
             <li><a href="subscribe.html">Advisory Subscription</a></li>
             <li><a href="media.html">Media & Awareness</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section>
+    <main id="main-content">
+        <section class="card">
             <h2>Regional Heatwave Hotspot Map</h2>
             <p>Click on any region on the map below to view the detailed forecast and temperature alerts for that
                 specific zone.</p>
 
+            <!-- Task 6: Image Styling with hover zoom effect and same sizing -->
             <p align="center">
-                <img src="regional_map.png" alt="Regional Heatwave Hotspot Map" usemap="#hotspotmap" width="700"
-                    height="400" border="1">
+                <img src="regional_map.png" alt="Regional Heatwave Hotspot Map" usemap="#hotspotmap" class="map-image" style="max-width: 700px; width: 100%; height: auto;">
             </p>
 
             <map name="hotspotmap">
@@ -55,17 +59,24 @@
             </map>
         </section>
 
-        <section>
-            <h3>Region Quick Summary & Legend</h3>
+        <!-- Task 4: Card Sidebar for quick region legend -->
+        <section class="sidebar-card notice-sidebar">
+            <h3>Region Quick Summary &amp; Legend</h3>
             <p>Click any region below to navigate to its detailed forecast section:</p>
-            <ul>
-                <li><a href="forecast.html#north"><strong id="north">Region A (North Zone):</strong> High Risk — Max Temp: 43.5°C</a></li>
-                <li><a href="forecast.html#central"><strong id="central">Region B (Central Zone):</strong> Severe Risk — Max Temp: 46.8°C</a></li>
-                <li id="coastal"><a href="forecast.html#coastal"><strong id="konkan">Region C (Coastal Konkan):</strong> Moderate Risk — Max Temp: 36.2°C</a></li>
-                <li><a href="forecast.html#vidarbha"><strong id="vidarbha">Region D (Vidarbha Zone):</strong> Critical Alert — Max Temp: 47.2°C</a></li>
+            <ul style="line-height: 2;">
+                <li><a href="forecast.html#north"><strong id="north" style="color: #d97706;">Region A (North Zone):</strong> High Risk — Max Temp: 43.5°C</a></li>
+                <li><a href="forecast.html#central"><strong id="central" style="color: #ea580c;">Region B (Central Zone):</strong> Severe Risk — Max Temp: 46.8°C</a></li>
+                <li id="coastal"><a href="forecast.html#coastal"><strong id="konkan" style="color: #059669;">Region C (Coastal Konkan):</strong> Moderate Risk — Max Temp: 36.2°C</a></li>
+                <li><a href="forecast.html#vidarbha"><strong id="vidarbha" style="color: #dc2626;">Region D (Vidarbha Zone):</strong> Critical Alert — Max Temp: 47.2°C</a></li>
             </ul>
         </section>
     </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
 </body>
 

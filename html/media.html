@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media & Awareness - Heatwave Intelligence System</title>
+    <!-- Task 3, 6, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
 
     <noscript>
-        <div style="background-color: #ffcccc; color: #990000; padding: 10px; border: 1px solid #990000;">
+        <div style="background-color: #ffcccc; color: #990000; padding: 10px; border: 1px solid #990000; text-align: center; border-radius: 8px; margin: 10px auto; max-width: 1200px;">
             <strong>Notice:</strong> JavaScript is disabled in your browser. Some interactive features of the Heatwave
             Intelligence System may be limited.
         </div>
     </noscript>
 
-    <header id="main-header">
-        <h1 id="system-title">Heatwave Intelligence System</h1>
-        <p><i>Heatwave Safety Media & Awareness Center</i></p>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Heatwave Safety Media &amp; Awareness Center</i></p>
     </header>
 
-    <nav id="main-nav">
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="alert-details.html">Alert Bulletin</a></li>
@@ -31,47 +35,58 @@
             <li><a href="hotspot-map.html">Hotspot Map</a></li>
             <li><a href="forecast.html">Forecast Summary</a></li>
             <li><a href="subscribe.html">Advisory Subscription</a></li>
-            <li><a href="media.html">Media & Awareness</a></li>
+            <li><a href="media.html" class="active">Media & Awareness</a></li>
         </ul>
     </nav>
 
-    <main>
-        <h2>Public Awareness & Multimedia Guidance</h2>
+    <main id="main-content">
+        <h2>Public Awareness &amp; Multimedia Guidance</h2>
 
-        <section>
+        <section class="card" style="text-align: center;">
             <h3>Heatwave Safety Awareness Video</h3>
             <p>Watch the instructional video below on heat-stroke prevention and emergency hydration guidelines:</p>
-            <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/wdeqnR4H_Xc"
-                title="Heatwave Safety Awareness Video" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-                Your browser does not support iframes.
-            </iframe>
+            <div style="margin: 20px 0;">
+                <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/wdeqnR4H_Xc"
+                    title="Heatwave Safety Awareness Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                    Your browser does not support iframes.
+                </iframe>
+            </div>
             <p><small>Watch directly on YouTube: <a href="https://youtu.be/wdeqnR4H_Xc" target="_blank">Heatwave Safety Awareness Video (YouTube)</a></small></p>
         </section>
 
+        <section class="card">
+            <h3>Embedded Live Weather Portal &amp; Location Map</h3>
 
-        <section>
-            <h3>Embedded Live Weather Portal & Location Map</h3>
+            <div style="margin-bottom: 24px;">
+                <h4>Live Temperature &amp; Heatwave Monitoring Map</h4>
+                <iframe
+                    src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=%C2%B0C&metricWind=default&zoom=5&overlay=temp&product=ecmwf&level=surface&lat=19.753&lon=75.714"
+                    width="100%" height="400" style="border:1px solid #ccc;" title="Live Weather Map">
+                    Your browser does not support iframes.
+                </iframe>
+                <p>Official IMD Website: <a href="https://mausam.imd.gov.in/" target="_blank">mausam.imd.gov.in</a></p>
+            </div>
 
-            <h4>Live Temperature & Heatwave Monitoring Map</h4>
-            <iframe
-                src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=%C2%B0C&metricWind=default&zoom=5&overlay=temp&product=ecmwf&level=surface&lat=19.753&lon=75.714"
-                width="100%" height="400" style="border:1px solid #ccc;" title="Live Weather Map">
-                Your browser does not support iframes.
-            </iframe>
-            <p>Official IMD Website: <a href="https://mausam.imd.gov.in/" target="_blank">mausam.imd.gov.in</a></p>
-
-            <h4>Regional IMD Weather Center Location</h4>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.250482594685!2d73.8504!3d18.5175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMxJzAzLjAiTiA3M8KwNTEnMDEuNCJF!5e0!3m2!1sen!2sin!4v1600000000000"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                title="IMD Weather Center Location Map">
-                Your browser does not support iframes.
-            </iframe>
+            <div style="text-align: center;">
+                <h4>Regional IMD Weather Center Location</h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.250482594685!2d73.8504!3d18.5175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMxJzAzLjAiTiA3M8KwNTEnMDEuNCJF!5e0!3m2!1sen!2sin!4v1600000000000"
+                    width="100%" height="450" style="border:0; max-width:700px;" allowfullscreen="" loading="lazy"
+                    title="IMD Weather Center Location Map">
+                    Your browser does not support iframes.
+                </iframe>
+            </div>
         </section>
     </main>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
 </body>
 

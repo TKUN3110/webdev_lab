@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About System - Heatwave Intelligence System</title>
+    <!-- Task 3, 4, 5, 9: External CSS links from css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
 
-    <header id="main-header">
-        <h1 id="system-title">Heatwave Intelligence System</h1>
-        <hr>
+    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Architecture, Objectives &amp; Stakeholder Framework</i></p>
     </header>
 
-    <nav id="main-nav">
+    <nav id="main-nav" class="nav-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="alert-details.html">Alert Bulletin</a></li>
-            <li><a href="about-system.html">About System</a></li>
+            <li><a href="about-system.html" class="active">About System</a></li>
             <li><a href="sources.html">Data Sources & Stakeholders</a></li>
             <li><a href="navigation.html">Navigation Portal</a></li>
             <li><a href="hotspot-map.html">Hotspot Map</a></li>
@@ -27,10 +32,9 @@
             <li><a href="media.html">Media & Awareness</a></li>
         </ul>
     </nav>
-    <hr>
 
-    <main>
-        <section>
+    <main id="main-content">
+        <section class="card">
             <h3>Message from Disaster Management Officer</h3>
             <blockquote>
                 "Using AI models and ground-truth IoT sensor data, we can accurately predict heatwave progression and
@@ -39,62 +43,47 @@
                 <cite>— Chief Meteorologist, IMD Regional Center</cite>
             </blockquote>
         </section>
-        <hr>
 
-        <div id="objective-section">
-            <table border="1" cellpadding="10" cellspacing="0" width="100%" bgcolor="#e6f4ea">
-                <tr>
-                    <td>
-                        <h3>🎯 Objective Section (Normal Baseline Risk)</h3>
-                        <p>
-                            The objective of <span>Use Case </span> is to build an <strong>AI-driven heatwave
-                                monitoring system</strong>
-                            that continuously analyzes temperature data and sends <em>automated early warnings</em>.
-                        </p>
-                        <ul>
-                            <li>Predict maximum temperatures across seven IMD regions.</li>
-                            <li>Deploy IoT AWS hardware units for ground validation.</li>
-                            <li>Disseminate advisories to citizens, farmers, and healthcare workers.</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+        <!-- Task 4 & Task 5: Cards / Table section layout styling -->
+        <div id="objective-section" class="info-card" style="border-left: 6px solid #10b981;">
+            <h3>🎯 Objective Section (Normal Baseline Risk)</h3>
+            <p>
+                The objective of the system is to build an <strong>AI-driven heatwave
+                    monitoring system</strong>
+                that continuously analyzes temperature data and sends <em>automated early warnings</em>.
+            </p>
+            <ul>
+                <li>Predict maximum temperatures across seven IMD regions.</li>
+                <li>Deploy IoT AWS hardware units for ground validation.</li>
+                <li>Disseminate advisories to citizens, farmers, and healthcare workers.</li>
+            </ul>
         </div>
-        <br>
 
-        <div id="sources-section">
-            <table border="1" cellpadding="10" cellspacing="0" width="100%" bgcolor="#fef7e0">
-                <tr>
-                    <td>
-                        <h3>📡 Data Sources Section (Heat Watch Severity)</h3>
-                        <p>
-                            The system collects data from the <strong>India Meteorological Department (IMD)</strong>
-                            repository (1951-2026).
-                            Key data attributes include <em>Timestamp</em>, <em>Latitude</em>, <em>Longitude</em>, and
-                            <span>Maximum Temperature</span>.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+        <div id="sources-section" class="info-card" style="border-left: 6px solid #f59e0b;">
+            <h3>📡 Data Sources Section (Heat Watch Severity)</h3>
+            <p>
+                The system collects data from the <strong>India Meteorological Department (IMD)</strong>
+                repository (1951-2026).
+                Key data attributes include <em>Timestamp</em>, <em>Latitude</em>, <em>Longitude</em>, and
+                <span>Maximum Temperature</span>.
+            </p>
         </div>
-        <br>
 
-        <div id="stakeholders-section">
-            <table border="1" cellpadding="10" cellspacing="0" width="100%" bgcolor="#fce8e6">
-                <tr>
-                    <td>
-                        <h3>👥 Stakeholders Section (Severe Alert Severity)</h3>
-                        <p>
-                            Primary beneficiaries include <strong>Disaster Management Authorities</strong>,
-                            <strong>Municipal Corporations</strong>,
-                            <em>Public Health Agencies</em>, and <span>General Citizens</span>.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+        <div id="stakeholders-section" class="info-card" style="border-left: 6px solid #ef4444;">
+            <h3>👥 Stakeholders Section (Severe Alert Severity)</h3>
+            <p>
+                Primary beneficiaries include <strong>Disaster Management Authorities</strong>,
+                <strong>Municipal Corporations</strong>,
+                <em>Public Health Agencies</em>, and <span>General Citizens</span>.
+            </p>
         </div>
     </main>
-    <hr>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
+        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
+    </footer>
 
 </body>
 
