@@ -1,72 +1,86 @@
-/* ==========================================
-   Task 7: Table Styling for Price List / Data Tables
-   ========================================== */
+/* ==========================================================================
+   HEATWAVE INTELLIGENCE SYSTEM - TABLE STYLESHEET (table.css)
+   Fulfilling: Task 7 (Table Styling for Forecast & Severity List)
+   ========================================================================== */
 
-/* Main Table Container & Styling */
+/* Main Table Container (Task 7 Requirement: border-collapse) */
 table {
     width: 100%;
     border-collapse: collapse; /* Task 7: Collapse borders */
-    margin: 24px 0;
+    margin: 28px 0;
     font-size: 0.95rem;
-    background-color: #ffffff;
-    border-radius: 12px;
+    background: #131b2e;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    border: 1px solid #cbd5e1;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Table Caption */
 caption {
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
-    font-size: 1.1rem;
-    color: #0f172a;
-    margin-bottom: 12px;
+    font-size: 1.15rem;
+    color: #f8fafc;
+    margin-bottom: 14px;
     caption-side: top;
-    text-align: center;
-}
-
-/* Table Header (Task 7: Add header background color & center align) */
-th {
-    background: linear-gradient(135deg, #1e293b, #334155);
-    color: #ffffff;
-    font-weight: 600;
-    padding: 14px 16px;
-    text-align: center; /* Task 7: Center align text */
-    border: 1px solid #475569;
+    text-align: center; /* Task 7: Center align */
     letter-spacing: 0.02em;
 }
 
-/* Table Body Cells (Task 7: Center align text) */
-td {
-    padding: 12px 16px;
+/* Table Header (Task 7 Requirement: Header background color & center align text) */
+th {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); /* Task 7: Header background color */
+    color: #f8fafc;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    padding: 16px 18px;
     text-align: center; /* Task 7: Center align text */
-    border: 1px solid #e2e8f0;
-    color: #1e293b;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
-/* Zebra-striping Rows (Task 7: Use nth-child(even)) */
+th:last-child {
+    border-right: none;
+}
+
+/* Table Body Cells (Task 7 Requirement: Center align text) */
+td {
+    padding: 14px 18px;
+    text-align: center; /* Task 7: Center align text */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+/* Zebra-striping Rows (Task 7 Requirement: nth-child(even)) */
 tbody tr:nth-child(even) {
-    background-color: #f8fafc; /* Task 7: Zebra-striping rows */
+    background-color: rgba(255, 255, 255, 0.03); /* Task 7: Zebra-striping rows */
 }
 
-/* Table Row Hover Effect */
-tbody tr:hover {
-    background-color: #f1f5f9;
+/* Table Row Hover State */
+tbody tr {
     transition: background-color 0.2s ease;
 }
 
-/* Severity Indicator Badges inside Tables */
-td mark {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 6px;
+tbody tr:hover {
+    background-color: rgba(59, 130, 246, 0.12);
 }
 
-/* Footer row in table */
+/* Table Footer Row */
 tfoot td {
-    background-color: #f1f5f9;
+    background-color: rgba(15, 23, 42, 0.8);
     font-style: italic;
-    color: #64748b;
+    color: #94a3b8;
     font-size: 0.88rem;
-    padding: 14px;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }

@@ -14,9 +14,9 @@
 
 <body>
 
-    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
-        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
-        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Region-wise Maximum Temperature Forecast &amp; Severity Table</i></p>
+    <header id="main-header" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); padding: 30px; border-bottom: 4px solid #ef4444; border-radius: 16px; margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); text-align: center;">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.3rem; font-family: 'Outfit', sans-serif;">🌡️ Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0; font-size: 1.05rem;"><i>Region-wise Maximum Temperature Forecast &amp; Severity Telemetry</i></p>
     </header>
 
     <nav id="main-nav" class="nav-bar">
@@ -34,7 +34,7 @@
     </nav>
 
     <main id="main-content">
-        <h2>Region-wise Temperature &amp; Forecast Summary</h2>
+        <h2>📊 Region-wise Temperature &amp; Forecast Summary</h2>
 
         <!-- Task 7: Styled Table with border-collapse, header background, zebra-striping, and center-aligned text -->
         <table>
@@ -56,57 +56,57 @@
             </thead>
             <tbody>
                 <tr id="north">
-                    <td rowspan="2">North Zone</td>
+                    <td rowspan="2"><strong>North Zone</strong></td>
                     <td>Jalgaon AWS</td>
-                    <td><strong>43.5</strong></td>
+                    <td><strong style="color: #f59e0b;">43.5</strong></td>
                     <td>+3.8</td>
                     <td>Heatwave (HW)</td>
-                    <td><mark style="background-color: #fef08a; color: #854d0e;">Yellow Watch</mark></td>
+                    <td><span class="badge badge-warning">Yellow Watch</span></td>
                 </tr>
                 <tr>
                     <td>Nashik IMD</td>
                     <td>41.2</td>
                     <td>+2.5</td>
                     <td>Normal High</td>
-                    <td><mark style="background-color: #d1fae5; color: #065f46;">Green Advisory</mark></td>
+                    <td><span class="badge badge-success">Green Advisory</span></td>
                 </tr>
                 <tr id="central">
-                    <td rowspan="2">Central Zone</td>
+                    <td rowspan="2"><strong>Central Zone</strong></td>
                     <td>Solapur AWS</td>
-                    <td><strong>46.8</strong></td>
+                    <td><strong style="color: #ef4444;">46.8</strong></td>
                     <td>+5.9</td>
                     <td>Severe Heatwave (SHW)</td>
-                    <td><mark style="background-color: #ffedd5; color: #c2410c;">Orange Alert</mark></td>
+                    <td><span class="badge badge-warning" style="background: rgba(245,158,11,0.3); color: #fde68a;">Orange Alert</span></td>
                 </tr>
                 <tr>
                     <td>Pune IMD</td>
                     <td>39.5</td>
                     <td>+2.1</td>
                     <td>Moderate Risk</td>
-                    <td><mark style="background-color: #fef08a; color: #854d0e;">Yellow Watch</mark></td>
+                    <td><span class="badge badge-warning">Yellow Watch</span></td>
                 </tr>
                 <tr id="vidarbha">
-                    <td rowspan="2">Vidarbha Zone</td>
+                    <td rowspan="2"><strong>Vidarbha Zone</strong></td>
                     <td>Chandrapur AWS</td>
-                    <td><strong style="color: #ef4444;">47.2</strong></td>
-                    <td>+6.8</td>
+                    <td><strong style="color: #ef4444; font-size: 1.15rem;">47.2</strong></td>
+                    <td><span style="color: #fca5a5; font-weight:700;">+6.8</span></td>
                     <td>Severe Heatwave (SHW)</td>
-                    <td><mark class="blinking-text" style="background-color: #fee2e2; color: #991b1b;">Red Emergency</mark></td>
+                    <td><span class="badge badge-danger blinking-text">Red Emergency</span></td>
                 </tr>
                 <tr>
                     <td>Nagpur IMD</td>
-                    <td><strong>45.5</strong></td>
+                    <td><strong style="color: #ef4444;">45.5</strong></td>
                     <td>+5.2</td>
                     <td>Severe Heatwave (SHW)</td>
-                    <td><mark style="background-color: #ffedd5; color: #c2410c;">Orange Alert</mark></td>
+                    <td><span class="badge badge-warning" style="background: rgba(245,158,11,0.3); color: #fde68a;">Orange Alert</span></td>
                 </tr>
                 <tr id="coastal">
-                    <td>Coastal Zone</td>
+                    <td><strong>Coastal Zone</strong></td>
                     <td>Mumbai IMD</td>
                     <td>36.2</td>
                     <td>+1.5</td>
                     <td>High Humidity Risk</td>
-                    <td><mark style="background-color: #fef08a; color: #854d0e;">Yellow Watch</mark></td>
+                    <td><span class="badge badge-warning">Yellow Watch</span></td>
                 </tr>
             </tbody>
             <tfoot>

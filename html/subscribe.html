@@ -14,9 +14,9 @@
 
 <body>
 
-    <header id="main-header" style="background-color: #0f172a; padding: 25px; border-bottom: 4px solid #ef4444; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
-        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.2rem;">Heatwave Intelligence System</h1>
-        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0;"><i>Online Heatwave Advisory Subscription Form</i></p>
+    <header id="main-header" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); padding: 30px; border-bottom: 4px solid #ef4444; border-radius: 16px; margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); text-align: center;">
+        <h1 id="system-title" style="color: #ffffff; text-align: center; margin: 0; font-size: 2.3rem; font-family: 'Outfit', sans-serif;">🌡️ Heatwave Intelligence System</h1>
+        <p style="color: #cbd5e1; text-align: center; margin: 5px 0 0 0; font-size: 1.05rem;"><i>Online Heatwave Emergency Advisory Subscription Portal</i></p>
     </header>
 
     <nav id="main-nav" class="nav-bar">
@@ -34,10 +34,10 @@
     </nav>
 
     <main id="main-content">
-        <h2>Heatwave Advisory Subscription Registration</h2>
+        <h2>📝 Heatwave Advisory Subscription Registration</h2>
 
-        <div id="subscription-success-prompt" style="display:none; background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: 600;">
-            🎉 Success! You have successfully subscribed to Heatwave Advisories.
+        <div id="subscription-success-prompt" style="display:none; background-color: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); padding: 18px; border-radius: 12px; margin-bottom: 24px; text-align: center; font-weight: 600; font-size: 1.05rem;">
+            🎉 Success! You have successfully subscribed to Emergency Heatwave Advisories.
         </div>
 
         <!-- Task 8: Form UI styling with fieldset, legend, :focus, :hover, border-radius -->
@@ -71,15 +71,17 @@
                     <option value="marathwada">Marathwada Zone (Latur, Nanded)</option>
                 </select>
 
-                <label style="display:block; margin-top:10px;">Preferred Alert Language:</label>
-                <input type="radio" id="lang-en" name="language" value="English" required>
-                <label for="lang-en" style="margin-right: 15px;">English</label>
-                <input type="radio" id="lang-hi" name="language" value="Hindi">
-                <label for="lang-hi" style="margin-right: 15px;">Hindi</label>
-                <input type="radio" id="lang-mr" name="language" value="Marathi">
-                <label for="lang-mr">Marathi</label>
+                <label style="display:block; margin-top:14px;">Preferred Alert Language:</label>
+                <div style="margin-bottom: 14px;">
+                    <input type="radio" id="lang-en" name="language" value="English" required>
+                    <label for="lang-en" style="margin-right: 18px;">English</label>
+                    <input type="radio" id="lang-hi" name="language" value="Hindi">
+                    <label for="lang-hi" style="margin-right: 18px;">Hindi</label>
+                    <input type="radio" id="lang-mr" name="language" value="Marathi">
+                    <label for="lang-mr">Marathi</label>
+                </div>
 
-                <label style="display:block; margin-top:15px;">Alert Notifications to Receive:</label>
+                <label style="display:block; margin-top:16px;">Alert Notifications to Receive:</label>
                 <div style="margin-bottom: 8px;">
                     <input type="checkbox" id="alert-temp" name="alerts" value="Temperature Forecasts" checked>
                     <label for="alert-temp">Daily Temperature Forecasts</label>
@@ -92,7 +94,7 @@
                     <input type="checkbox" id="alert-health" name="alerts" value="Public Health Advisories">
                     <label for="alert-health">Public Health &amp; Medical Advisories</label>
                 </div>
-                <div style="margin-bottom: 12px;">
+                <div style="margin-bottom: 16px;">
                     <input type="checkbox" id="alert-agri" name="alerts" value="Agricultural Crop Advisories">
                     <label for="alert-agri">Agricultural &amp; Crop Safety Advisories</label>
                 </div>

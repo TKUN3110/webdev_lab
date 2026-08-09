@@ -1,56 +1,59 @@
-/* ==========================================
-   Task 9: Page Layout Using CSS (Header, Sidebar, Content, Footer)
-   ========================================== */
+/* ==========================================================================
+   HEATWAVE INTELLIGENCE SYSTEM - LAYOUT STYLESHEET (layout.css)
+   Fulfilling: Task 9 (Page Layout Header, Sidebar, Content, Footer)
+   ========================================================================== */
 
-/* Page Layout Wrapper */
+/* Main Layout Flex/Grid Wrapper (Task 9: Header, Sidebar, Content, Footer layout) */
 .layout-container,
 main#main-content {
-    display: flex; /* Task 9: Use flex or float for page layout */
+    display: flex; /* Task 9: flex layout */
     flex-wrap: wrap;
-    gap: 24px;
-    margin: 24px auto;
+    gap: 28px;
+    margin: 28px auto;
     align-items: flex-start;
 }
 
-/* Header (Task 9: Header at top) */
+/* Header Container (Task 9: Header at top) */
 header#main-header,
 header {
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     box-sizing: border-box;
 }
 
-/* Content Area (Task 9: Content to right/left with width and spacing) */
+/* Main Content Area (Task 9: Content width and spacing) */
 #main-content > section,
 .content-area,
 main article {
-    flex: 2 1 65%; /* Task 9: Set width and flex allocation */
-    min-width: 300px;
+    flex: 2 1 66%; /* Task 9: Set widths and spacing */
+    min-width: 320px;
     box-sizing: border-box;
 }
 
-/* Sidebar Area (Task 9: Set sidebar to left/right) */
+/* Sidebar Container (Task 9: Set sidebar to left/right with width and spacing) */
 #alert-aside,
 .sidebar,
-aside {
-    flex: 1 1 28%; /* Task 9: Set width for sidebar */
-    min-width: 260px;
+aside,
+.notice-sidebar {
+    flex: 1 1 28%; /* Task 9: Set sidebar width */
+    min-width: 280px;
     box-sizing: border-box;
 }
 
-/* Footer (Task 9: Footer at bottom) */
+/* Footer Container (Task 9: Footer at bottom) */
 footer,
 .main-footer {
     width: 100%;
-    clear: both; /* Fallback for float layouts */
-    margin-top: 32px;
+    clear: both; /* Fallback for float-based layouts */
+    margin-top: 48px;
 }
 
-/* Responsive Mobile Layout (Stacking for smaller screens) */
-@media (max-width: 768px) {
+/* Mobile Responsive Stacking Layout */
+@media (max-width: 868px) {
     .layout-container,
     main#main-content {
         flex-direction: column;
+        gap: 20px;
     }
     
     #main-content > section,
@@ -58,8 +61,14 @@ footer,
     main article,
     #alert-aside,
     .sidebar,
-    aside {
+    aside,
+    .notice-sidebar {
         flex: 1 1 100%;
         width: 100%;
+    }
+    
+    .product-card {
+        width: 100% !important;
+        margin: 10px 0 !important;
     }
 }
