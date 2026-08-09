@@ -1,18 +1,18 @@
 /* ==========================================================================
    HEATWAVE INTELLIGENCE SYSTEM - NAVIGATION & MEDIA STYLESHEET (nav.css)
+   Clean Light Theme - Solid Colors (No Gradients)
    Fulfilling: Task 2 (Internal/External Navigation Menu), 
                Task 6 (Image Gallery & Interactive Map Styling)
    ========================================================================== */
 
-/* Navigation Container (Task 2 & Modern Glassmorphism Bar) */
+/* Navigation Container (Task 2 & Clean Solid Navbar) */
 nav, .nav-bar, #main-nav {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+    background-color: #1e293b; /* Solid background color (No Gradients) */
     padding: 10px 16px;
-    border-radius: 16px;
+    border-radius: 12px;
     margin: 20px 0;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #0f172a;
     text-align: center;
 }
 
@@ -36,31 +36,30 @@ nav ul li, .nav-bar ul li, #main-nav ul li {
 /* Navigation Links (Task 2 Requirement: Styling links & text-decoration) */
 nav ul li a, .nav-bar ul li a, #main-nav ul li a {
     display: inline-block;
-    color: #cbd5e1;
+    color: #f8fafc; /* Task 2: link colors */
     text-decoration: none; /* Task 2: remove text decoration */
     padding: 10px 16px;
     font-size: 0.9rem;
     font-weight: 600;
-    border-radius: 10px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
     letter-spacing: 0.01em;
 }
 
 /* Navigation Hover Effect (Task 2 Requirement: :hover effect & color change) */
 nav ul li a:hover, .nav-bar ul li a:hover, #main-nav ul li a:hover {
-    background-color: #3b82f6; /* Task 2: hover background color */
+    background-color: #2563eb; /* Task 2: hover effect solid background color */
     color: #ffffff; /* Task 2: change link colors */
     text-decoration: none;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
 
 /* Active Navigation Link Indicator */
 nav ul li a.active, .nav-bar ul li a.active, #main-nav ul li a.active {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background-color: #2563eb;
     color: #ffffff;
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
 }
 
 
@@ -82,35 +81,34 @@ img,
 .map-image {
     max-width: 100%;
     height: auto;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    margin: 16px auto;
+    border: 3px solid #cbd5e1; /* Task 6: Add border */
+    border-radius: 12px;
+    margin: 16px auto; /* Task 6: Add spacing between images */
     display: block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    object-fit: cover; /* Task 6: Same size / fitting */
 }
 
 /* Hover Zoom Effect (Task 6 Requirement: transition, transform: scale()) */
 img:hover,
 .gallery-image:hover,
 .map-image:hover {
-    transform: scale(1.03); /* Task 6: transform: scale() zoom effect */
-    border-color: #3b82f6;
-    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.25);
+    transform: scale(1.03); /* Task 6: transform: scale() hover zoom effect */
+    border-color: #2563eb;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
 }
 
-/* Embed IFrames Styling (Videos & Interactive Live Weather Maps) */
+/* Embed IFrames Styling (Videos & Interactive Weather Maps) */
 iframe {
-    border-radius: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    border: 2px solid #cbd5e1 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, border-color 0.3s ease;
     max-width: 100%;
 }
 
 iframe:hover {
-    border-color: #3b82f6 !important;
+    border-color: #2563eb !important;
     transform: translateY(-3px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }

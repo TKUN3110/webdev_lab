@@ -23,36 +23,35 @@
             margin: 0 3px;
         }
         #main-nav ul li a {
-            color: #cbd5e1;
+            color: #f8fafc;
             text-decoration: none; /* Remove text decoration */
             padding: 10px 16px;
             font-weight: 600;
             border-radius: 8px;
-            transition: all 0.25s ease;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
         #main-nav ul li a:hover {
-            background-color: #3b82f6; /* Hover effect */
+            background-color: #2563eb; /* Hover effect */
             color: #ffffff;
             text-decoration: none; /* :hover, text-decoration, display: inline-block */
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
         }
     </style>
 </head>
 
 <body id="home-body" class="portal-body">
 
-    <!-- Task 1: Inline CSS to style Header, h1, and p -->
-    <header id="main-header" class="header-section" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); padding: 30px; border-bottom: 4px solid #ef4444; border-radius: 16px; margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); text-align: center; position: relative;">
-        <div style="position: absolute; top: 16px; right: 20px; display: flex; align-items: center; gap: 8px; background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.4); padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; color: #fca5a5;">
-            <span class="pulse-dot"></span> LIVE SYSTEM STATUS: RED EMERGENCY
+    <!-- Task 1: Inline CSS to style Header, h1, and p (Solid background, No Gradients) -->
+    <header id="main-header" class="header-section" style="background-color: #1e293b; padding: 25px; border-bottom: 4px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center; position: relative;">
+        <div style="position: absolute; top: 16px; right: 20px; display: flex; align-items: center; gap: 8px; background-color: #fee2e2; border: 1px solid #fca5a5; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; color: #991b1b;">
+            <span class="pulse-dot"></span> LIVE STATUS: RED EMERGENCY
         </div>
-        <h1 id="system-title" class="title-heading" style="color: #ffffff; text-align: center; margin: 0 0 10px 0; font-size: 2.3rem; font-family: 'Outfit', sans-serif; text-shadow: 0 2px 10px rgba(0,0,0,0.5);"
+        <h1 id="system-title" class="title-heading" style="color: #ffffff; text-align: center; margin: 0 0 10px 0; font-size: 2.2rem; font-family: 'Outfit', sans-serif;"
             title="Climate Intelligence for Heatwave Monitoring, Prediction, and Early Warning">
             🌡️ Heatwave Intelligence System
         </h1>
         <p id="season-tagline" class="tagline" style="color: #cbd5e1; text-align: center; margin: 0; font-size: 1.05rem; line-height: 1.6;">
-            <i>AI-Powered National Climate Intelligence, Temperature Forecasting &amp; Early Warning Portal</i><br>
-            <span style="display: inline-block; margin-top: 6px; color: #f59e0b; font-weight: 700; background: rgba(245,158,11,0.15); padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(245,158,11,0.3);">
+            <i>Climate Intelligence for Heatwave Monitoring, Prediction, and Early Warning</i><br>
+            <span style="display: inline-block; margin-top: 6px; color: #d97706; font-weight: 700; background-color: #fffbeb; padding: 4px 12px; border-radius: 6px; border: 1px solid #fde68a;">
                 🔥 Active Monitoring Season: Summer / Pre-Monsoon 2026
             </span>
         </p>
@@ -94,31 +93,31 @@
             <div style="text-align: center; margin-top: 24px;">
                 <div class="product-card">
                     <div style="font-size: 2rem; margin-bottom: 8px;">🔥</div>
-                    <div class="stat-number" style="color: #ef4444;">47.2°C</div>
+                    <div class="stat-number" style="color: #dc2626;">47.2°C</div>
                     <div class="stat-label">Max Observed Temp</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 10px;">Recorded at Chandrapur AWS Sensor Unit with real-feel index of 53.5°C.</p>
+                    <p style="font-size: 0.9rem; color: #475569; margin-top: 10px;">Recorded at Chandrapur AWS Sensor Unit with real-feel index of 53.5°C.</p>
                 </div>
                 <div class="product-card">
                     <div style="font-size: 2rem; margin-bottom: 8px;">🛰️</div>
-                    <div class="stat-number" style="color: #3b82f6;">7 Zones</div>
+                    <div class="stat-number" style="color: #2563eb;">7 Zones</div>
                     <div class="stat-label">IMD Meteorological Coverage</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 10px;">Real-time grid temperature analytics and satellite LST heat mapping.</p>
+                    <p style="font-size: 0.9rem; color: #475569; margin-top: 10px;">Real-time grid temperature analytics and satellite LST heat mapping.</p>
                 </div>
                 <div class="product-card">
                     <div style="font-size: 2rem; margin-bottom: 8px;">⚡</div>
-                    <div class="stat-number" style="color: #10b981;">Hourly</div>
+                    <div class="stat-number" style="color: #059669;">Hourly</div>
                     <div class="stat-label">Telemetry Refresh Rate</div>
-                    <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 10px;">Automated IoT weather station sync and early emergency SMS advisories.</p>
+                    <p style="font-size: 0.9rem; color: #475569; margin-top: 10px;">Automated IoT weather station sync and early emergency SMS advisories.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Task 4 & Task 10: Sidebar with glowing alert effect, rounded corners, box shadow, border -->
+        <!-- Task 4 & Task 10: Sidebar with glowing alert effect (Solid colors, Light theme) -->
         <aside id="alert-aside" class="notice-sidebar offer-box">
             <h3><span class="pulse-dot"></span> <span class="blinking-text">CRITICAL HEATWAVE ALERT</span></h3>
-            <p style="color: #fca5a5; font-weight: 600; font-size: 0.98rem; margin-bottom: 12px;">
+            <p style="color: #991b1b; font-weight: 600; font-size: 0.98rem; margin-bottom: 12px;">
                 Severe heatwave warning issued for Vidarbha, Marathwada, and Central India regions.
-                Ambient temperatures exceeding <strong>45°C</strong>. Check the <a href="alert-details.html" style="color: #fde68a; text-decoration: underline;">Alert Bulletin</a> for safety guidelines.
+                Ambient temperatures exceeding <strong>45°C</strong>. Check the <a href="alert-details.html" style="color: #2563eb; text-decoration: underline;">Alert Bulletin</a> for safety guidelines.
             </p>
             <ul>
                 <li>

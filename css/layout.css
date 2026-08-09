@@ -1,15 +1,16 @@
 /* ==========================================================================
    HEATWAVE INTELLIGENCE SYSTEM - LAYOUT STYLESHEET (layout.css)
+   Clean Light Theme - Solid Colors (No Gradients)
    Fulfilling: Task 9 (Page Layout Header, Sidebar, Content, Footer)
    ========================================================================== */
 
-/* Main Layout Flex/Grid Wrapper (Task 9: Header, Sidebar, Content, Footer layout) */
+/* Main Layout Flex Wrapper (Task 9: Header, Sidebar, Content, Footer layout) */
 .layout-container,
 main#main-content {
     display: flex; /* Task 9: flex layout */
     flex-wrap: wrap;
-    gap: 28px;
-    margin: 28px auto;
+    gap: 24px;
+    margin: 24px auto;
     align-items: flex-start;
 }
 
@@ -17,7 +18,7 @@ main#main-content {
 header#main-header,
 header {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     box-sizing: border-box;
 }
 
@@ -26,7 +27,7 @@ header {
 .content-area,
 main article {
     flex: 2 1 66%; /* Task 9: Set widths and spacing */
-    min-width: 320px;
+    min-width: 300px;
     box-sizing: border-box;
 }
 
@@ -36,7 +37,7 @@ main article {
 aside,
 .notice-sidebar {
     flex: 1 1 28%; /* Task 9: Set sidebar width */
-    min-width: 280px;
+    min-width: 260px;
     box-sizing: border-box;
 }
 
@@ -44,16 +45,16 @@ aside,
 footer,
 .main-footer {
     width: 100%;
-    clear: both; /* Fallback for float-based layouts */
-    margin-top: 48px;
+    clear: both;
+    margin-top: 40px;
 }
 
 /* Mobile Responsive Stacking Layout */
-@media (max-width: 868px) {
+@media (max-width: 768px) {
     .layout-container,
     main#main-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
     }
     
     #main-content > section,
