@@ -5,35 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Heatwave Intelligence System</title>
-    <!-- Task 3 & 9: External CSS links from css folder -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/layout.css">
     
-    <!-- Task 2: Internal CSS (<style> in <head>) -->
     <style>
-        /* Task 2: Internal CSS (<style> in <head>) */
         #main-nav ul {
-            list-style-type: none; /* Remove bullet points */
+            list-style-type: none;
             padding: 0;
             margin: 0;
         }
         #main-nav ul li {
-            display: inline-block; /* Display menu items horizontally */
+            display: inline-block;
             margin: 0 3px;
         }
         #main-nav ul li a {
-            color: #0f172a; /* Dark text for high contrast */
-            text-decoration: none; /* Remove text decoration */
+            color: #0f172a;
+            text-decoration: none;
             padding: 10px 16px;
             font-weight: 600;
             border-radius: 8px;
             transition: background-color 0.2s ease, color 0.2s ease;
         }
         #main-nav ul li a:hover {
-            background-color: #f1f5f9; /* Hover effect */
+            background-color: #f1f5f9;
             color: #dc2626;
-            text-decoration: none; /* :hover, text-decoration, display: inline-block */
+            text-decoration: none;
         }
         #main-nav ul li a.active {
             background-color: #dc2626;
@@ -44,8 +41,7 @@
 
 <body id="home-body" class="portal-body">
 
-    <!-- Task 1: Inline CSS to style Header, h1, and p (Solid Light Header, No Dark Blue) -->
-    <header id="main-header" class="header-section" style="background-color: #ffffff; padding: 25px; border: 1px solid #cbd5e1; border-bottom: 4px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); text-align: center; position: relative;">
+    <header id="main-header" class="header-section" style="background-color: #ffffff; padding: 25px; border: 3px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); text-align: center; position: relative;">
         <div style="position: absolute; top: 16px; right: 20px; display: flex; align-items: center; gap: 8px; background-color: #fee2e2; border: 1px solid #fca5a5; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; color: #991b1b;">
             <span class="pulse-dot"></span> LIVE STATUS: RED EMERGENCY
         </div>
@@ -93,7 +89,6 @@
                 </p>
             </article>
 
-            <!-- Task 5: Feature Cards display using CSS Box Model (display: inline-block, width, padding, margin, border, box-shadow) -->
             <div style="text-align: center; margin-top: 24px;">
                 <div class="product-card">
                     <div style="font-size: 2rem; margin-bottom: 8px;">🔥</div>
@@ -116,7 +111,6 @@
             </div>
         </section>
 
-        <!-- Task 4 & Task 10: Sidebar with glowing alert effect (Solid colors, Light theme) -->
         <aside id="alert-aside" class="notice-sidebar offer-box">
             <h3><span class="pulse-dot"></span> <span class="blinking-text">CRITICAL HEATWAVE ALERT</span></h3>
             <p style="color: #991b1b; font-weight: 600; font-size: 0.98rem; margin-bottom: 12px;">
@@ -139,12 +133,6 @@
             </ul>
         </aside>
     </main>
-
-    <!-- Task 3: Common Footer Style -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
-        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
-    </footer>
 
 </body>
 

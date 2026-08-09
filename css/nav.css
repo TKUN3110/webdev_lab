@@ -1,13 +1,5 @@
-/* ==========================================================================
-   HEATWAVE INTELLIGENCE SYSTEM - NAVIGATION & MEDIA STYLESHEET (nav.css)
-   Clean Light Theme - Light Navigation Bar (No Dark Blue)
-   Fulfilling: Task 2 (Internal/External Navigation Menu), 
-               Task 6 (Image Gallery & Interactive Map Styling)
-   ========================================================================== */
-
-/* Navigation Container (Task 2 & Clean Solid Light Navbar) */
 nav, .nav-bar, #main-nav {
-    background-color: #ffffff; /* Solid Light Background */
+    background-color: #ffffff;
     padding: 10px 16px;
     border-radius: 12px;
     margin: 20px 0;
@@ -16,9 +8,8 @@ nav, .nav-bar, #main-nav {
     text-align: center;
 }
 
-/* Navigation List (Task 2 Requirement: Remove bullet points) */
 nav ul, .nav-bar ul, #main-nav ul {
-    list-style-type: none; /* Task 2: remove bullet points */
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -27,17 +18,15 @@ nav ul, .nav-bar ul, #main-nav ul {
     gap: 4px;
 }
 
-/* Navigation Items (Task 2 Requirement: Display menu items horizontally) */
 nav ul li, .nav-bar ul li, #main-nav ul li {
-    display: inline-block; /* Task 2: display menu items horizontally */
+    display: inline-block;
     margin: 3px 2px;
 }
 
-/* Navigation Links (Task 2 Requirement: Styling links & text-decoration) */
 nav ul li a, .nav-bar ul li a, #main-nav ul li a {
     display: inline-block;
-    color: #1e293b; /* Task 2: dark link text on light background */
-    text-decoration: none; /* Task 2: remove text decoration */
+    color: #0f172a;
+    text-decoration: none;
     padding: 10px 16px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -46,27 +35,19 @@ nav ul li a, .nav-bar ul li a, #main-nav ul li a {
     letter-spacing: 0.01em;
 }
 
-/* Navigation Hover Effect (Task 2 Requirement: :hover effect & color change) */
 nav ul li a:hover, .nav-bar ul li a:hover, #main-nav ul li a:hover {
-    background-color: #f1f5f9; /* Task 2: hover effect light background */
-    color: #dc2626; /* Task 2: change link colors to red accent */
+    background-color: #f1f5f9;
+    color: #dc2626;
     text-decoration: none;
     transform: translateY(-1px);
 }
 
-/* Active Navigation Link Indicator */
 nav ul li a.active, .nav-bar ul li a.active, #main-nav ul li a.active {
-    background-color: #dc2626; /* Solid Red Active Pill */
+    background-color: #dc2626;
     color: #ffffff;
     font-weight: 700;
 }
 
-
-/* ==========================================================================
-   Task 6: Image Gallery Styling with CSS
-   ========================================================================== */
-
-/* Gallery Grid Layout */
 .gallery-container, .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -74,31 +55,28 @@ nav ul li a.active, .nav-bar ul li a.active, #main-nav ul li a.active {
     margin: 24px 0;
 }
 
-/* Image Item Styling (Task 6: Set same size for images, border, spacing) */
 img,
 .gallery-image,
 .map-image {
     max-width: 100%;
     height: auto;
-    border: 3px solid #cbd5e1; /* Task 6: Add border */
+    border: 3px solid #cbd5e1;
     border-radius: 12px;
-    margin: 16px auto; /* Task 6: Add spacing between images */
+    margin: 16px auto;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-    object-fit: cover; /* Task 6: Same size / fitting */
+    object-fit: cover;
 }
 
-/* Hover Zoom Effect (Task 6 Requirement: transition, transform: scale()) */
 img:hover,
 .gallery-image:hover,
 .map-image:hover {
-    transform: scale(1.03); /* Task 6: transform: scale() hover zoom effect */
+    transform: scale(1.03);
     border-color: #dc2626;
     box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
 }
 
-/* Embed IFrames Styling (Videos & Interactive Weather Maps) */
 iframe {
     border-radius: 12px;
     border: 2px solid #cbd5e1 !important;

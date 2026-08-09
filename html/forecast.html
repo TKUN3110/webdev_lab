@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forecast Summary - Heatwave Intelligence System</title>
-    <!-- Task 3, 7, 9: External CSS links from css folder -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/table.css">
@@ -14,7 +13,7 @@
 
 <body>
 
-    <header id="main-header" style="background-color: #ffffff; padding: 25px; border: 1px solid #cbd5e1; border-bottom: 4px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+    <header id="main-header" style="background-color: #ffffff; padding: 25px; border: 3px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
         <h1 id="system-title" style="color: #0f172a; text-align: center; margin: 0; font-size: 2.2rem; font-family: 'Outfit', sans-serif;">🌡️ Heatwave Intelligence System</h1>
         <p style="color: #475569; text-align: center; margin: 5px 0 0 0; font-size: 1.05rem;"><i>Region-wise Maximum Temperature Forecast &amp; Severity Telemetry</i></p>
     </header>
@@ -34,19 +33,13 @@
     </nav>
 
     <main id="main-content">
-        <h2>📊 Region-wise Temperature &amp; Forecast Summary</h2>
+        <h2>Region-wise Temperature Telemetry Table</h2>
 
-        <!-- Task 7: Styled Table with border-collapse, header background, zebra-striping, and center-aligned text -->
         <table>
-            <caption>Official IMD &amp; AI Model Region-wise Temperature Forecast</caption>
+            <caption>Table 1: Meteorological Telemetry &amp; Heatwave Severity Matrix</caption>
             <thead>
                 <tr>
-                    <th colspan="2">Location Details</th>
-                    <th colspan="3">Temperature &amp; Alert Metrics</th>
-                    <th>Action Required</th>
-                </tr>
-                <tr>
-                    <th>Region Zone</th>
+                    <th>Region / Zone</th>
                     <th>Station Name</th>
                     <th>Max Temp (°C)</th>
                     <th>Departure (°C)</th>
@@ -119,12 +112,6 @@
             </tfoot>
         </table>
     </main>
-
-    <!-- Task 3: Common Footer -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
-        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
-    </footer>
 
 </body>
 

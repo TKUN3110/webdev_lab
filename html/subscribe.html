@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advisory Subscription - Heatwave Intelligence System</title>
-    <!-- Task 3, 8, 9: External CSS links from css folder -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/form.css">
@@ -14,7 +13,7 @@
 
 <body>
 
-    <header id="main-header" style="background-color: #ffffff; padding: 25px; border: 1px solid #cbd5e1; border-bottom: 4px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+    <header id="main-header" style="background-color: #ffffff; padding: 25px; border: 3px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
         <h1 id="system-title" style="color: #0f172a; text-align: center; margin: 0; font-size: 2.2rem; font-family: 'Outfit', sans-serif;">🌡️ Heatwave Intelligence System</h1>
         <p style="color: #475569; text-align: center; margin: 5px 0 0 0; font-size: 1.05rem;"><i>Online Heatwave Emergency Advisory Subscription Portal</i></p>
     </header>
@@ -34,73 +33,74 @@
     </nav>
 
     <main id="main-content">
-        <h2>📝 Heatwave Advisory Subscription Registration</h2>
+        <form action="#" method="post" id="subscriptionForm">
+            <legend>Registration for Heatwave Early Advisories</legend>
 
-        <div id="subscription-success-prompt" style="display:none; background-color: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); padding: 18px; border-radius: 12px; margin-bottom: 24px; text-align: center; font-weight: 600; font-size: 1.05rem;">
-            🎉 Success! You have successfully subscribed to Emergency Heatwave Advisories.
-        </div>
+            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">
+                Register to receive automated real-time SMS alerts, WhatsApp emergency bulletins, and regional heatwave
+                precautions directly from the India Meteorological Department.
+            </p>
 
-        <!-- Task 8: Form UI styling with fieldset, legend, :focus, :hover, border-radius -->
-        <form id="subscriptionForm" action="#" method="POST">
             <fieldset>
-                <legend>Subscriber Personal Information</legend>
+                <legend>Personal Details</legend>
 
-                <label for="cname">Full Name:</label>
-                <input type="text" id="cname" name="cname" placeholder="Enter your full name" required autofocus>
+                <p>
+                    <label for="subscriber-name">Full Name *</label><br>
+                    <input type="text" id="subscriber-name" name="name" placeholder="Enter your full name" required>
+                </p>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                <p>
+                    <label for="subscriber-email">Email Address *</label><br>
+                    <input type="email" id="subscriber-email" name="email" placeholder="example@domain.com" required>
+                </p>
 
-                <label for="mobile">Mobile Number:</label>
-                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
-
-                <label for="age">Subscriber Age:</label>
-                <input type="number" id="age" name="age" min="1" max="120" placeholder="Age in years" required>
+                <p>
+                    <label for="subscriber-mobile">Mobile Number (for SMS Alerts) *</label><br>
+                    <input type="tel" id="subscriber-mobile" name="mobile" placeholder="+91 9876543210" pattern="[0-9+ ]{10,14}" required>
+                </p>
             </fieldset>
 
             <fieldset>
-                <legend>Alert &amp; Location Preferences</legend>
+                <legend>Regional &amp; Stakeholder Preferences</legend>
 
-                <label for="region">Select Monitoring Region Zone:</label>
-                <select id="region" name="region" required>
-                    <option value="">--Select Region--</option>
-                    <option value="north">North Zone (Jalgaon, Nashik)</option>
-                    <option value="central">Central Zone (Solapur, Pune)</option>
-                    <option value="vidarbha">Vidarbha Zone (Nagpur, Chandrapur)</option>
-                    <option value="konkan">Coastal Konkan Zone (Mumbai, Thane)</option>
-                    <option value="marathwada">Marathwada Zone (Latur, Nanded)</option>
-                </select>
+                <p>
+                    <label for="subscriber-region">Select Monitoring Region *</label><br>
+                    <select id="subscriber-region" name="region" required>
+                        <option value="">-- Choose your zone --</option>
+                        <option value="vidarbha">Vidarbha Zone (Chandrapur / Amravati)</option>
+                        <option value="central">Central Zone (Solapur / Pune / Ahmednagar)</option>
+                        <option value="north">North Zone (Jalgaon / Nashik)</option>
+                        <option value="coastal">Coastal Zone (Mumbai / Thane / Konkan)</option>
+                        <option value="marathwada">Marathwada Zone (Aurangabad / Nanded)</option>
+                    </select>
+                </p>
 
-                <label style="display:block; margin-top:14px;">Preferred Alert Language:</label>
-                <div style="margin-bottom: 14px;">
-                    <input type="radio" id="lang-en" name="language" value="English" required>
-                    <label for="lang-en" style="margin-right: 18px;">English</label>
-                    <input type="radio" id="lang-hi" name="language" value="Hindi">
-                    <label for="lang-hi" style="margin-right: 18px;">Hindi</label>
-                    <input type="radio" id="lang-mr" name="language" value="Marathi">
-                    <label for="lang-mr">Marathi</label>
-                </div>
+                <p>
+                    <label>Stakeholder Category *</label><br>
+                    <input type="radio" id="cat-citizen" name="category" value="citizen" checked>
+                    <label for="cat-citizen" style="font-weight: normal; margin-right: 15px;">General Citizen</label>
 
-                <label style="display:block; margin-top:16px;">Alert Notifications to Receive:</label>
-                <div style="margin-bottom: 8px;">
-                    <input type="checkbox" id="alert-temp" name="alerts" value="Temperature Forecasts" checked>
-                    <label for="alert-temp">Daily Temperature Forecasts</label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <input type="checkbox" id="alert-shw" name="alerts" value="Severe Heatwave Warnings" checked>
-                    <label for="alert-shw">Severe Heatwave Emergency Warnings</label>
-                </div>
-                <div style="margin-bottom: 8px;">
-                    <input type="checkbox" id="alert-health" name="alerts" value="Public Health Advisories">
-                    <label for="alert-health">Public Health &amp; Medical Advisories</label>
-                </div>
-                <div style="margin-bottom: 16px;">
-                    <input type="checkbox" id="alert-agri" name="alerts" value="Agricultural Crop Advisories">
-                    <label for="alert-agri">Agricultural &amp; Crop Safety Advisories</label>
-                </div>
+                    <input type="radio" id="cat-farmer" name="category" value="farmer">
+                    <label for="cat-farmer" style="font-weight: normal; margin-right: 15px;">Farmer / Agricultural Worker</label>
 
-                <label for="startdate">Preferred Subscription Start Date:</label>
-                <input type="date" id="startdate" name="startdate" required>
+                    <input type="radio" id="cat-health" name="category" value="health">
+                    <label for="cat-health" style="font-weight: normal; margin-right: 15px;">Healthcare Worker</label>
+
+                    <input type="radio" id="cat-officer" name="category" value="disaster-officer">
+                    <label for="cat-officer" style="font-weight: normal;">Disaster Management Official</label>
+                </p>
+
+                <p>
+                    <label>Preferred Alert Channels</label><br>
+                    <input type="checkbox" id="chn-sms" name="channels" value="sms" checked>
+                    <label for="chn-sms" style="font-weight: normal; margin-right: 15px;">SMS Alert</label>
+
+                    <input type="checkbox" id="chn-whatsapp" name="channels" value="whatsapp" checked>
+                    <label for="chn-whatsapp" style="font-weight: normal; margin-right: 15px;">WhatsApp Advisory</label>
+
+                    <input type="checkbox" id="chn-email" name="channels" value="email">
+                    <label for="chn-email" style="font-weight: normal;">Email Digest</label>
+                </p>
             </fieldset>
 
             <div style="text-align: center;">
@@ -110,20 +110,10 @@
         </form>
     </main>
 
-    <!-- Task 3: Common Footer -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
-        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
-    </footer>
-
     <script>
         document.getElementById('subscriptionForm').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Successfully Subscribed to Heatwave Advisories!');
-            var successPrompt = document.getElementById('subscription-success-prompt');
-            if (successPrompt) {
-                successPrompt.style.display = 'block';
-            }
         });
     </script>
 

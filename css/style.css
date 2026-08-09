@@ -1,14 +1,6 @@
-/* ==========================================================================
-   HEATWAVE INTELLIGENCE SYSTEM - CORE STYLESHEET (style.css)
-   Clean Light Theme - Light Headers & Light Cards (No Dark Blue)
-   Fulfilling: Task 3 (External CSS, Theme), Task 4 (Sidebar Cards), 
-               Task 5 (Box Model Cards), Task 10 (Effects & Highlighting)
-   ========================================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Color Palette - Clean Light Theme */
     --bg-main: #f8fafc;
     --bg-surface: #ffffff;
     --bg-card: #ffffff;
@@ -43,7 +35,6 @@
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Site-wide Body & Typography (Task 3 Requirement) */
 body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-main);
@@ -54,7 +45,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Page Layout Outer Centering */
 body > header,
 body > nav,
 body > main,
@@ -64,7 +54,6 @@ body > footer {
     margin-right: auto;
 }
 
-/* Common Heading Styles (Task 3 Requirement) */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
@@ -94,7 +83,6 @@ h3 {
     color: #1e293b; 
 }
 
-/* Links Styling */
 a {
     color: #2563eb;
     text-decoration: none;
@@ -106,7 +94,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Horizontal Rule Styling */
 hr {
     border: 0;
     height: 1px;
@@ -114,9 +101,6 @@ hr {
     margin: 24px 0;
 }
 
-/* ==========================================
-   Task 4: Style Sidebar / Categories Card
-   ========================================== */
 .notice-sidebar,
 aside,
 .sidebar-card {
@@ -162,9 +146,6 @@ aside:hover {
     transform: translateX(4px);
 }
 
-/* ==========================================
-   Task 5: Card Layout Using CSS Box Model
-   ========================================== */
 .card,
 .info-card,
 article,
@@ -182,7 +163,6 @@ section {
     box-shadow: var(--shadow-md);
 }
 
-/* Product Card Grid (Task 5: Box Model, inline-block/flex, width, margin, padding, border, shadow) */
 .product-card {
     display: inline-block;
     width: calc(33.333% - 24px);
@@ -221,13 +201,12 @@ section {
     font-weight: 600;
 }
 
-/* Blockquote Styling */
 blockquote {
     background-color: #f1f5f9;
-    border-left: 5px solid #64748b;
+    border: 2px solid #cbd5e1;
     margin: 20px 0;
     padding: 20px 24px;
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    border-radius: var(--radius-sm);
     font-style: italic;
     color: #1e293b;
     font-size: 1.05rem;
@@ -242,7 +221,6 @@ blockquote cite {
     font-size: 0.9rem;
 }
 
-/* Highlight Mark Tag */
 mark {
     background-color: #fef08a;
     color: #854d0e;
@@ -251,7 +229,6 @@ mark {
     font-weight: 600;
 }
 
-/* Status Badges with Solid Colors */
 .badge {
     display: inline-block;
     padding: 4px 12px;
@@ -286,14 +263,10 @@ mark {
     border: 1px solid #6ee7b7;
 }
 
-/* ==========================================
-   Task 10: CSS Effects & Highlighting (Offer / Alert Box)
-   ========================================== */
 .offer-box,
 .glowing-alert-box {
     background-color: var(--accent-red-bg);
-    border: 2px solid var(--accent-red-border);
-    border-left: 6px solid var(--accent-red);
+    border: 3px solid var(--accent-red);
     border-radius: var(--radius-md);
     padding: 24px;
     margin: 24px 0;
@@ -323,7 +296,6 @@ mark {
     }
 }
 
-/* Blinking text effect (Task 10) */
 .blinking-text {
     animation: alert-blink 1.2s ease-in-out infinite;
     color: var(--accent-red);
@@ -335,7 +307,6 @@ mark {
     50% { opacity: 0.35; }
 }
 
-/* Pulse indicator dot */
 .pulse-dot {
     display: inline-block;
     width: 10px;
@@ -350,33 +321,4 @@ mark {
     0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
     70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
-}
-
-/* ==========================================
-   Common Footer Style (Task 3 Requirement)
-   ========================================== */
-footer, .main-footer {
-    margin-top: 48px;
-    padding: 32px 24px;
-    background-color: #ffffff;
-    border: 1px solid var(--border-color);
-    border-top: 3px solid var(--accent-red);
-    color: #64748b;
-    text-align: center;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    font-size: 0.9rem;
-}
-
-footer p, .main-footer p {
-    margin: 4px 0;
-}
-
-footer a, .main-footer a {
-    color: #2563eb;
-    font-weight: 500;
-}
-
-footer a:hover, .main-footer a:hover {
-    color: #1d4ed8;
 }

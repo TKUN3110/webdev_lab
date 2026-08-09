@@ -1,20 +1,12 @@
-/* ==========================================================================
-   HEATWAVE INTELLIGENCE SYSTEM - LAYOUT STYLESHEET (layout.css)
-   Clean Light Theme - Solid Colors (No Gradients)
-   Fulfilling: Task 9 (Page Layout Header, Sidebar, Content, Footer)
-   ========================================================================== */
-
-/* Main Layout Flex Wrapper (Task 9: Header, Sidebar, Content, Footer layout) */
 .layout-container,
 main#main-content {
-    display: flex; /* Task 9: flex layout */
+    display: flex;
     flex-wrap: wrap;
     gap: 24px;
     margin: 24px auto;
     align-items: flex-start;
 }
 
-/* Header Container (Task 9: Header at top) */
 header#main-header,
 header {
     width: 100%;
@@ -22,26 +14,23 @@ header {
     box-sizing: border-box;
 }
 
-/* Main Content Area (Task 9: Content width and spacing) */
 #main-content > section,
 .content-area,
 main article {
-    flex: 2 1 66%; /* Task 9: Set widths and spacing */
+    flex: 2 1 66%;
     min-width: 300px;
     box-sizing: border-box;
 }
 
-/* Sidebar Container (Task 9: Set sidebar to left/right with width and spacing) */
 #alert-aside,
 .sidebar,
 aside,
 .notice-sidebar {
-    flex: 1 1 28%; /* Task 9: Set sidebar width */
+    flex: 1 1 28%;
     min-width: 260px;
     box-sizing: border-box;
 }
 
-/* Footer Container (Task 9: Footer at bottom) */
 footer,
 .main-footer {
     width: 100%;
@@ -49,7 +38,6 @@ footer,
     margin-top: 40px;
 }
 
-/* Mobile Responsive Stacking Layout */
 @media (max-width: 768px) {
     .layout-container,
     main#main-content {

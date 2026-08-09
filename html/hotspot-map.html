@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotspot Map - Heatwave Intelligence System</title>
-    <!-- Task 3, 6, 9: External CSS links from css folder -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -13,7 +12,7 @@
 
 <body>
 
-    <header id="main-header" style="background-color: #ffffff; padding: 25px; border: 1px solid #cbd5e1; border-bottom: 4px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+    <header id="main-header" style="background-color: #ffffff; padding: 25px; border: 3px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
         <h1 id="system-title" style="color: #0f172a; text-align: center; margin: 0; font-size: 2.2rem; font-family: 'Outfit', sans-serif;">🌡️ Heatwave Intelligence System</h1>
         <p style="color: #475569; text-align: center; margin: 5px 0 0 0; font-size: 1.05rem;"><i>Interactive Regional Heatwave Hotspot Map</i></p>
     </header>
@@ -38,28 +37,22 @@
             <p>Click on any region on the map below to view the detailed forecast and temperature alerts for that
                 specific zone.</p>
 
-            <!-- Task 6: Image Styling with hover zoom effect and same sizing -->
             <p align="center">
                 <img src="regional_map.png" alt="Regional Heatwave Hotspot Map" usemap="#hotspotmap" class="map-image" style="max-width: 700px; width: 100%; height: auto;">
             </p>
 
             <map name="hotspotmap">
-                <!-- North Zone (Yellow): Nandurbar, Dhule, Jalgaon, Nashik -->
                 <area shape="rect" coords="200,30,420,180" alt="North Zone" href="forecast.html#north"
                     title="Region A: North Zone (Jalgaon / Nashik) - Click to view forecast">
-                <!-- Central Zone (Orange): Solapur, Pune, Ahmednagar, Aurangabad, Beed -->
                 <area shape="rect" coords="230,180,530,300" alt="Central Zone" href="forecast.html#central"
                     title="Region B: Central Zone (Solapur / Pune) - Click to view forecast">
-                <!-- Coastal Konkan (Green): Mumbai, Thane, Palghar, Raigad, Ratnagiri -->
                 <area shape="rect" coords="140,180,280,380" alt="Coastal Zone" href="forecast.html#coastal"
                     title="Region C: Coastal Zone (Mumbai / Konkan) - Click to view forecast">
-                <!-- Vidarbha Zone (Red): Nagpur, Chandrapur, Amravati, Akola -->
                 <area shape="rect" coords="420,30,680,250" alt="Vidarbha Zone" href="forecast.html#vidarbha"
                     title="Region D: Vidarbha Zone (Nagpur / Chandrapur) - Click to view forecast">
             </map>
         </section>
 
-        <!-- Task 4: Card Sidebar for quick region legend -->
         <section class="sidebar-card notice-sidebar">
             <h3>Region Quick Summary &amp; Legend</h3>
             <p>Click any region below to navigate to its detailed forecast section:</p>
@@ -71,12 +64,6 @@
             </ul>
         </section>
     </main>
-
-    <!-- Task 3: Common Footer -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Heatwave Intelligence System | Developed under Web Development Laboratory</p>
-        <p>In Collaboration with India Meteorological Department (IMD) &amp; Disaster Management Authority</p>
-    </footer>
 
 </body>
 
