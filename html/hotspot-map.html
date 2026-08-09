@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspot Map - Heatwave Intelligence System</title>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <h1 id="system-title">Heatwave Intelligence System</h1>
+        <p><i>Interactive Regional Heatwave Hotspot Map</i></p>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alert-details.html">Alert Bulletin</a></li>
+            <li><a href="about-system.html">About System</a></li>
+            <li><a href="sources.html">Data Sources & Stakeholders</a></li>
+            <li><a href="navigation.html">Navigation Portal</a></li>
+            <li><a href="hotspot-map.html">Hotspot Map</a></li>
+            <li><a href="forecast.html">Forecast Summary</a></li>
+            <li><a href="subscribe.html">Advisory Subscription</a></li>
+            <li><a href="media.html">Media & Awareness</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Regional Heatwave Hotspot Map</h2>
+            <p>Click on any region on the map below to view the detailed forecast and temperature alerts for that
+                specific zone.</p>
+
+            <p align="center">
+                <img src="regional_map.png" alt="Regional Heatwave Hotspot Map" usemap="#hotspotmap" width="700"
+                    height="400" border="1">
+            </p>
+
+            <map name="hotspotmap">
+                <!-- North Zone (Yellow): Nandurbar, Dhule, Jalgaon, Nashik -->
+                <area shape="rect" coords="200,30,420,180" alt="North Zone" href="forecast.html#north"
+                    title="Region A: North Zone (Jalgaon / Nashik) - Click to view forecast">
+                <!-- Central Zone (Orange): Solapur, Pune, Ahmednagar, Aurangabad, Beed -->
+                <area shape="rect" coords="230,180,530,300" alt="Central Zone" href="forecast.html#central"
+                    title="Region B: Central Zone (Solapur / Pune) - Click to view forecast">
+                <!-- Coastal Konkan (Green): Mumbai, Thane, Palghar, Raigad, Ratnagiri -->
+                <area shape="rect" coords="140,180,280,380" alt="Coastal Zone" href="forecast.html#coastal"
+                    title="Region C: Coastal Zone (Mumbai / Konkan) - Click to view forecast">
+                <!-- Vidarbha Zone (Red): Nagpur, Chandrapur, Amravati, Akola -->
+                <area shape="rect" coords="420,30,680,250" alt="Vidarbha Zone" href="forecast.html#vidarbha"
+                    title="Region D: Vidarbha Zone (Nagpur / Chandrapur) - Click to view forecast">
+            </map>
+        </section>
+
+        <section>
+            <h3>Region Quick Summary & Legend</h3>
+            <p>Click any region below to navigate to its detailed forecast section:</p>
+            <ul>
+                <li><a href="forecast.html#north"><strong id="north">Region A (North Zone):</strong> High Risk — Max Temp: 43.5°C</a></li>
+                <li><a href="forecast.html#central"><strong id="central">Region B (Central Zone):</strong> Severe Risk — Max Temp: 46.8°C</a></li>
+                <li id="coastal"><a href="forecast.html#coastal"><strong id="konkan">Region C (Coastal Konkan):</strong> Moderate Risk — Max Temp: 36.2°C</a></li>
+                <li><a href="forecast.html#vidarbha"><strong id="vidarbha">Region D (Vidarbha Zone):</strong> Critical Alert — Max Temp: 47.2°C</a></li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>
