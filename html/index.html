@@ -23,7 +23,7 @@
             margin: 0 3px;
         }
         #main-nav ul li a {
-            color: #f8fafc;
+            color: #0f172a; /* Dark text for high contrast */
             text-decoration: none; /* Remove text decoration */
             padding: 10px 16px;
             font-weight: 600;
@@ -31,9 +31,13 @@
             transition: background-color 0.2s ease, color 0.2s ease;
         }
         #main-nav ul li a:hover {
-            background-color: #2563eb; /* Hover effect */
-            color: #ffffff;
+            background-color: #f1f5f9; /* Hover effect */
+            color: #dc2626;
             text-decoration: none; /* :hover, text-decoration, display: inline-block */
+        }
+        #main-nav ul li a.active {
+            background-color: #dc2626;
+            color: #ffffff;
         }
     </style>
 </head>
