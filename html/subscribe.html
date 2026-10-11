@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advisory Subscription - Heatwave Intelligence System</title>
+    <title>Advisory Subscription - Heatwave Monitoring System</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/form.css">
@@ -14,7 +14,7 @@
 <body>
 
     <header id="main-header" style="background-color: #ffffff; padding: 25px; border: 3px solid #dc2626; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
-        <h1 id="system-title" style="color: #0f172a; text-align: center; margin: 0; font-size: 2.2rem; font-family: 'Outfit', sans-serif;">🌡️ Heatwave Intelligence System</h1>
+        <h1 id="system-title" style="color: #0f172a; text-align: center; margin: 0; font-size: 2.2rem; font-family: 'Outfit', sans-serif;">🌡️ Heatwave Monitoring System</h1>
         <p style="color: #475569; text-align: center; margin: 5px 0 0 0; font-size: 1.05rem;"><i>Online Heatwave Emergency Advisory Subscription Portal</i></p>
     </header>
 
@@ -24,7 +24,6 @@
             <li><a href="alert-details.html">Alert Bulletin</a></li>
             <li><a href="about-system.html">About System</a></li>
             <li><a href="sources.html">Data Sources & Stakeholders</a></li>
-            <li><a href="navigation.html">Navigation Portal</a></li>
             <li><a href="hotspot-map.html">Hotspot Map</a></li>
             <li><a href="forecast.html">Forecast Summary</a></li>
             <li><a href="subscribe.html" class="active">Advisory Subscription</a></li>
@@ -33,88 +32,454 @@
     </nav>
 
     <main id="main-content">
-        <form action="#" method="post" id="subscriptionForm">
-            <legend>Registration for Heatwave Early Advisories</legend>
+        <div style="width: 100%;">
+            <h2>Advisory Subscription Portal</h2>
+        </div>
 
-            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">
-                Register to receive automated real-time SMS alerts, WhatsApp emergency bulletins, and regional heatwave
-                precautions directly from the India Meteorological Department.
-            </p>
-
-            <fieldset>
-                <legend>Personal Details</legend>
-
-                <p>
-                    <label for="subscriber-name">Full Name *</label><br>
-                    <input type="text" id="subscriber-name" name="name" placeholder="Enter your full name" required>
-                </p>
-
-                <p>
-                    <label for="subscriber-email">Email Address *</label><br>
-                    <input type="email" id="subscriber-email" name="email" placeholder="example@domain.com" required>
-                </p>
-
-                <p>
-                    <label for="subscriber-mobile">Mobile Number (for SMS Alerts) *</label><br>
-                    <input type="tel" id="subscriber-mobile" name="mobile" placeholder="+91 9876543210" pattern="[0-9+ ]{10,14}" required>
-                </p>
-            </fieldset>
-
-            <fieldset>
-                <legend>Regional &amp; Stakeholder Preferences</legend>
-
-                <p>
-                    <label for="subscriber-region">Select Monitoring Region *</label><br>
-                    <select id="subscriber-region" name="region" required>
-                        <option value="">-- Choose your zone --</option>
-                        <option value="vidarbha">Vidarbha Zone (Chandrapur / Amravati)</option>
-                        <option value="central">Central Zone (Solapur / Pune / Ahmednagar)</option>
-                        <option value="north">North Zone (Jalgaon / Nashik)</option>
-                        <option value="coastal">Coastal Zone (Mumbai / Thane / Konkan)</option>
-                        <option value="marathwada">Marathwada Zone (Aurangabad / Nanded)</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label>Stakeholder Category *</label><br>
-                    <input type="radio" id="cat-citizen" name="category" value="citizen" checked>
-                    <label for="cat-citizen" style="font-weight: normal; margin-right: 15px;">General Citizen</label>
-
-                    <input type="radio" id="cat-farmer" name="category" value="farmer">
-                    <label for="cat-farmer" style="font-weight: normal; margin-right: 15px;">Farmer / Agricultural Worker</label>
-
-                    <input type="radio" id="cat-health" name="category" value="health">
-                    <label for="cat-health" style="font-weight: normal; margin-right: 15px;">Healthcare Worker</label>
-
-                    <input type="radio" id="cat-officer" name="category" value="disaster-officer">
-                    <label for="cat-officer" style="font-weight: normal;">Disaster Management Official</label>
-                </p>
-
-                <p>
-                    <label>Preferred Alert Channels</label><br>
-                    <input type="checkbox" id="chn-sms" name="channels" value="sms" checked>
-                    <label for="chn-sms" style="font-weight: normal; margin-right: 15px;">SMS Alert</label>
-
-                    <input type="checkbox" id="chn-whatsapp" name="channels" value="whatsapp" checked>
-                    <label for="chn-whatsapp" style="font-weight: normal; margin-right: 15px;">WhatsApp Advisory</label>
-
-                    <input type="checkbox" id="chn-email" name="channels" value="email">
-                    <label for="chn-email" style="font-weight: normal;">Email Digest</label>
-                </p>
-            </fieldset>
-
-            <div style="text-align: center;">
-                <input type="submit" value="Subscribe to Advisories">
-                <input type="reset" value="Clear Form">
+        <div class="form-wrapper">
+            <!-- Existing subscription reminder banner (rendered by JS if found) -->
+            <div id="existingSubBanner" class="existing-sub-banner" style="display: none;">
+                <div>
+                    <strong>ℹ️ Active Subscription Found:</strong> <span id="bannerSubName">User</span> is registered for <strong id="bannerSubRegion">Vidarbha Zone</strong>.
+                </div>
+                <div>
+                    <button type="button" class="btn-secondary-action" id="btnViewExisting" style="padding: 4px 12px; font-size: 0.85rem;">View Advisory Slip</button>
+                </div>
             </div>
-        </form>
+
+            <!-- Success Confirmation Card -->
+            <div id="subscriptionSuccessCard" class="confirmation-card" style="display: none;">
+                <div class="confirmation-header">
+                    <h3><span>✅</span> Advisory Subscription Active</h3>
+                    <span class="badge badge-success">● Monitored Feed</span>
+                </div>
+
+                <p style="color: #475569; margin: 0 0 16px 0; font-size: 0.95rem;">
+                    Registration confirmed in the IMD Emergency Warning Dispatch Registry. 
+                    Reference ID: <strong id="confirm-ref-id" style="color: #dc2626; font-family: monospace; font-size: 1.05rem;">HW-ADV-2026-849102</strong>
+                </p>
+
+                <div class="confirmation-grid">
+                    <div>
+                        <div class="confirmation-field-label">Subscriber Name</div>
+                        <div class="confirmation-field-value" id="confirm-name">—</div>
+                    </div>
+                    <div>
+                        <div class="confirmation-field-label">Monitoring Zone</div>
+                        <div class="confirmation-field-value" id="confirm-region">—</div>
+                    </div>
+                    <div>
+                        <div class="confirmation-field-label">Mobile Number</div>
+                        <div class="confirmation-field-value" id="confirm-mobile">—</div>
+                    </div>
+                    <div>
+                        <div class="confirmation-field-label">Email Address</div>
+                        <div class="confirmation-field-value" id="confirm-email">—</div>
+                    </div>
+                    <div>
+                        <div class="confirmation-field-label">Stakeholder Category</div>
+                        <div class="confirmation-field-value" id="confirm-category">—</div>
+                    </div>
+                    <div>
+                        <div class="confirmation-field-label">Active Alert Channels</div>
+                        <div class="confirmation-channels" id="confirm-channels">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="confirmation-notice">
+                    <strong>📡 Broadcast Dispatch Rule:</strong> Real-time SMS alerts and WhatsApp advisories will trigger automatically 
+                    whenever telemetry sensors in your selected zone record temperatures exceeding <strong>40.0°C</strong> or Heat Index &gt; <strong>45.0°C</strong>.
+                </div>
+
+                <div class="confirmation-actions">
+                    <button type="button" class="btn-secondary-action" id="btnModifySub">✏️ Modify Details</button>
+                    <button type="button" class="btn-secondary-action" id="btnPrintSub">🖨️ Print Slip</button>
+                    <button type="button" class="btn-primary-action" id="btnNewSub">➕ Register Another User</button>
+                </div>
+            </div>
+
+            <!-- Subscription Form -->
+            <form action="#" method="post" id="subscriptionForm" novalidate>
+                <div class="form-intro-banner">
+                    <h3><span>📢</span> Registration for Heatwave Early Advisories</h3>
+                    <p>
+                        Register to receive automated real-time SMS alerts, WhatsApp emergency bulletins, and regional heatwave
+                        precautions directly from the India Meteorological Department monitoring stations.
+                    </p>
+                </div>
+
+                <fieldset>
+                    <legend>👤 Personal Details</legend>
+
+                    <div class="form-group">
+                        <label for="subscriber-name">Full Name <span class="required-star">*</span></label>
+                        <input type="text" id="subscriber-name" name="name" placeholder="Enter your full name" required>
+                        <div class="field-error" id="error-name">Please enter your full name (at least 2 letters).</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscriber-email">Email Address <span class="required-star">*</span></label>
+                        <input type="email" id="subscriber-email" name="email" placeholder="example@domain.com" required>
+                        <div class="field-error" id="error-email">Please enter a valid email address (e.g., user@domain.com).</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscriber-mobile">Mobile Number (for SMS Alerts) <span class="required-star">*</span></label>
+                        <input type="tel" id="subscriber-mobile" name="mobile" placeholder="10-digit mobile number, e.g. 9876543210" required>
+                        <div class="field-error" id="error-mobile">Please enter a valid 10-digit mobile number.</div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>📍 Regional &amp; Stakeholder Preferences</legend>
+
+                    <div class="form-group">
+                        <label for="subscriber-region">Select Monitoring Region <span class="required-star">*</span></label>
+                        <select id="subscriber-region" name="region" required>
+                            <option value="">-- Choose your zone --</option>
+                            <option value="vidarbha">Vidarbha Zone (Chandrapur / Amravati)</option>
+                            <option value="central">Central Zone (Solapur / Pune / Ahmednagar)</option>
+                            <option value="north">North Zone (Jalgaon / Nashik)</option>
+                            <option value="coastal">Coastal Zone (Mumbai / Thane / Konkan)</option>
+                            <option value="marathwada">Marathwada Zone (Aurangabad / Nanded)</option>
+                        </select>
+                        <div class="field-error" id="error-region">Please select your regional monitoring zone.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Stakeholder Category <span class="required-star">*</span></label>
+                        <div class="options-row">
+                            <label class="option-item" for="cat-citizen">
+                                <input type="radio" id="cat-citizen" name="category" value="citizen" checked>
+                                <span>General Citizen</span>
+                            </label>
+
+                            <label class="option-item" for="cat-farmer">
+                                <input type="radio" id="cat-farmer" name="category" value="farmer">
+                                <span>Farmer / Agricultural Worker</span>
+                            </label>
+
+                            <label class="option-item" for="cat-health">
+                                <input type="radio" id="cat-health" name="category" value="health">
+                                <span>Healthcare Worker</span>
+                            </label>
+
+                            <label class="option-item" for="cat-officer">
+                                <input type="radio" id="cat-officer" name="category" value="disaster-officer">
+                                <span>Disaster Management Official</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Alert Channels <span class="required-star">*</span></label>
+                        <div class="options-row">
+                            <label class="option-item" for="chn-sms">
+                                <input type="checkbox" id="chn-sms" name="channels" value="sms" checked>
+                                <span>📱 SMS Alert</span>
+                            </label>
+
+                            <label class="option-item" for="chn-whatsapp">
+                                <input type="checkbox" id="chn-whatsapp" name="channels" value="whatsapp" checked>
+                                <span>💬 WhatsApp Advisory</span>
+                            </label>
+
+                            <label class="option-item" for="chn-email">
+                                <input type="checkbox" id="chn-email" name="channels" value="email">
+                                <span>✉️ Email Digest</span>
+                            </label>
+                        </div>
+                        <div class="field-error" id="error-channels">Please select at least one alert delivery channel.</div>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <input type="submit" id="submitBtn" value="Subscribe to Advisories">
+                    <input type="reset" id="resetBtn" value="Clear Form">
+                </div>
+            </form>
+        </div>
     </main>
 
     <script>
-        document.getElementById('subscriptionForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Successfully Subscribed to Heatwave Advisories!');
-        });
+        (function () {
+            const form = document.getElementById('subscriptionForm');
+            const nameInput = document.getElementById('subscriber-name');
+            const emailInput = document.getElementById('subscriber-email');
+            const mobileInput = document.getElementById('subscriber-mobile');
+            const regionSelect = document.getElementById('subscriber-region');
+            const channelsCheckboxes = document.querySelectorAll('input[name="channels"]');
+            
+            const errorName = document.getElementById('error-name');
+            const errorEmail = document.getElementById('error-email');
+            const errorMobile = document.getElementById('error-mobile');
+            const errorRegion = document.getElementById('error-region');
+            const errorChannels = document.getElementById('error-channels');
+
+            const successCard = document.getElementById('subscriptionSuccessCard');
+            const existingBanner = document.getElementById('existingSubBanner');
+            const bannerSubName = document.getElementById('bannerSubName');
+            const bannerSubRegion = document.getElementById('bannerSubRegion');
+            const btnViewExisting = document.getElementById('btnViewExisting');
+
+            const confirmRefId = document.getElementById('confirm-ref-id');
+            const confirmName = document.getElementById('confirm-name');
+            const confirmRegion = document.getElementById('confirm-region');
+            const confirmMobile = document.getElementById('confirm-mobile');
+            const confirmEmail = document.getElementById('confirm-email');
+            const confirmCategory = document.getElementById('confirm-category');
+            const confirmChannels = document.getElementById('confirm-channels');
+
+            const btnModifySub = document.getElementById('btnModifySub');
+            const btnPrintSub = document.getElementById('btnPrintSub');
+            const btnNewSub = document.getElementById('btnNewSub');
+
+            const STORAGE_KEY = 'hw_advisory_subscription';
+
+            const regionNames = {
+                'vidarbha': 'Vidarbha Zone (Chandrapur / Amravati)',
+                'central': 'Central Zone (Solapur / Pune / Ahmednagar)',
+                'north': 'North Zone (Jalgaon / Nashik)',
+                'coastal': 'Coastal Zone (Mumbai / Thane / Konkan)',
+                'marathwada': 'Marathwada Zone (Aurangabad / Nanded)'
+            };
+
+            const categoryNames = {
+                'citizen': 'General Citizen',
+                'farmer': 'Farmer / Agricultural Worker',
+                'health': 'Healthcare Worker',
+                'disaster-officer': 'Disaster Management Official'
+            };
+
+            const channelLabels = {
+                'sms': { label: '📱 SMS Alert', cls: 'badge-danger' },
+                'whatsapp': { label: '💬 WhatsApp Advisory', cls: 'badge-success' },
+                'email': { label: '✉️ Email Digest', cls: 'badge-orange' }
+            };
+
+            // Clear single error helper
+            function clearError(inputElem, errorElem) {
+                if (inputElem) inputElem.classList.remove('is-invalid');
+                if (errorElem) errorElem.classList.remove('visible');
+            }
+
+            function setError(inputElem, errorElem) {
+                if (inputElem) inputElem.classList.add('is-invalid');
+                if (errorElem) errorElem.classList.add('visible');
+            }
+
+            // Real-time error removal
+            nameInput.addEventListener('input', () => clearError(nameInput, errorName));
+            emailInput.addEventListener('input', () => clearError(emailInput, errorEmail));
+            mobileInput.addEventListener('input', () => clearError(mobileInput, errorMobile));
+            regionSelect.addEventListener('change', () => clearError(regionSelect, errorRegion));
+            channelsCheckboxes.forEach(cb => {
+                cb.addEventListener('change', () => {
+                    const anyChecked = Array.from(channelsCheckboxes).some(c => c.checked);
+                    if (anyChecked) errorChannels.classList.remove('visible');
+                });
+            });
+
+            // Clean mobile digits
+            function extractPhone(phoneStr) {
+                return phoneStr.replace(/[^0-9]/g, '');
+            }
+
+            // Display Confirmation UI
+            function displayConfirmation(data) {
+                confirmRefId.textContent = data.refId || 'HW-ADV-2026-902143';
+                confirmName.textContent = data.name;
+                confirmRegion.textContent = regionNames[data.region] || data.region;
+                confirmMobile.textContent = data.mobile;
+                confirmEmail.textContent = data.email;
+                confirmCategory.textContent = categoryNames[data.category] || data.category;
+
+                // Render channel badges
+                confirmChannels.innerHTML = '';
+                if (data.channels && data.channels.length > 0) {
+                    data.channels.forEach(ch => {
+                        const meta = channelLabels[ch] || { label: ch, cls: 'badge-warning' };
+                        const span = document.createElement('span');
+                        span.className = 'badge ' + meta.cls;
+                        span.textContent = meta.label;
+                        confirmChannels.appendChild(span);
+                    });
+                } else {
+                    confirmChannels.textContent = 'None';
+                }
+
+                form.style.display = 'none';
+                successCard.style.display = 'block';
+                successCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Load existing stored subscription on startup
+            function checkExistingSubscription() {
+                try {
+                    const saved = localStorage.getItem(STORAGE_KEY);
+                    if (saved) {
+                        const data = JSON.parse(saved);
+                        if (data && data.name && data.region) {
+                            bannerSubName.textContent = data.name;
+                            bannerSubRegion.textContent = regionNames[data.region] || data.region;
+                            existingBanner.style.display = 'flex';
+                        }
+                    }
+                } catch (e) {
+                    console.warn('LocalStorage access warning:', e);
+                }
+            }
+
+            btnViewExisting.addEventListener('click', function () {
+                try {
+                    const saved = localStorage.getItem(STORAGE_KEY);
+                    if (saved) {
+                        displayConfirmation(JSON.parse(saved));
+                    }
+                } catch (e) {
+                    console.warn(e);
+                }
+            });
+
+            // Modify subscription button
+            btnModifySub.addEventListener('click', function () {
+                successCard.style.display = 'none';
+                form.style.display = 'block';
+                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // Print button
+            btnPrintSub.addEventListener('click', function () {
+                window.print();
+            });
+
+            // Register new subscriber button
+            btnNewSub.addEventListener('click', function () {
+                form.reset();
+                [nameInput, emailInput, mobileInput, regionSelect].forEach(el => el.classList.remove('is-invalid'));
+                [errorName, errorEmail, errorMobile, errorRegion, errorChannels].forEach(el => el.classList.remove('visible'));
+                successCard.style.display = 'none';
+                form.style.display = 'block';
+                nameInput.focus();
+                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // Form Reset button listener
+            form.addEventListener('reset', function () {
+                [nameInput, emailInput, mobileInput, regionSelect].forEach(el => el.classList.remove('is-invalid'));
+                [errorName, errorEmail, errorMobile, errorRegion, errorChannels].forEach(el => el.classList.remove('visible'));
+            });
+
+            // Form Submit validation and handling
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                let isValid = true;
+                let firstInvalidElement = null;
+
+                // Validate Name
+                const nameVal = nameInput.value.trim();
+                if (!nameVal || nameVal.length < 2) {
+                    setError(nameInput, errorName);
+                    isValid = false;
+                    if (!firstInvalidElement) firstInvalidElement = nameInput;
+                } else {
+                    clearError(nameInput, errorName);
+                }
+
+                // Validate Email
+                const emailVal = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                if (!emailVal || !emailRegex.test(emailVal)) {
+                    setError(emailInput, errorEmail);
+                    isValid = false;
+                    if (!firstInvalidElement) firstInvalidElement = emailInput;
+                } else {
+                    clearError(emailInput, errorEmail);
+                }
+
+                // Validate Mobile (10 digits)
+                const rawMobile = mobileInput.value.trim();
+                const cleanDigits = extractPhone(rawMobile);
+                // Must have at least 10 digits; if starts with 91 and has 12 digits, valid
+                const isTenDigits = cleanDigits.length === 10;
+                const isTwelveWith91 = cleanDigits.length === 12 && cleanDigits.startsWith('91');
+                if (!isTenDigits && !isTwelveWith91) {
+                    setError(mobileInput, errorMobile);
+                    isValid = false;
+                    if (!firstInvalidElement) firstInvalidElement = mobileInput;
+                } else {
+                    clearError(mobileInput, errorMobile);
+                }
+
+                // Validate Region
+                const regionVal = regionSelect.value;
+                if (!regionVal) {
+                    setError(regionSelect, errorRegion);
+                    isValid = false;
+                    if (!firstInvalidElement) firstInvalidElement = regionSelect;
+                } else {
+                    clearError(regionSelect, errorRegion);
+                }
+
+                // Validate Channels (at least one selected)
+                const selectedChannels = [];
+                channelsCheckboxes.forEach(cb => {
+                    if (cb.checked) selectedChannels.push(cb.value);
+                });
+
+                if (selectedChannels.length === 0) {
+                    errorChannels.classList.add('visible');
+                    isValid = false;
+                    if (!firstInvalidElement) firstInvalidElement = channelsCheckboxes[0];
+                } else {
+                    errorChannels.classList.remove('visible');
+                }
+
+                // Check Category
+                const selectedCategoryElem = document.querySelector('input[name="category"]:checked');
+                const categoryVal = selectedCategoryElem ? selectedCategoryElem.value : 'citizen';
+
+                if (!isValid) {
+                    if (firstInvalidElement) {
+                        firstInvalidElement.focus();
+                        firstInvalidElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                // Generate Subscription Record
+                const randomId = Math.floor(100000 + Math.random() * 900000);
+                const subscriptionData = {
+                    refId: 'HW-ADV-2026-' + randomId,
+                    name: nameVal,
+                    email: emailVal,
+                    mobile: cleanDigits.length === 12 ? '+' + cleanDigits : '+91 ' + cleanDigits,
+                    region: regionVal,
+                    category: categoryVal,
+                    channels: selectedChannels,
+                    timestamp: new Date().toISOString()
+                };
+
+                try {
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(subscriptionData));
+                } catch (err) {
+                    console.warn('Could not save to localStorage:', err);
+                }
+
+                // Display success confirmation card
+                displayConfirmation(subscriptionData);
+
+                // Update banner
+                bannerSubName.textContent = subscriptionData.name;
+                bannerSubRegion.textContent = regionNames[subscriptionData.region] || subscriptionData.region;
+                existingBanner.style.display = 'flex';
+            });
+
+            // Initialize check on load
+            checkExistingSubscription();
+        })();
     </script>
 
 </body>
